@@ -1,4 +1,11 @@
+:root {
+    --dark-color: #000000;
+    --main-color: #FFF8E7;
+    --font-color-dark: #282828;
+    --font-color-bright: #ffffff;
+}
+
 body {
-    background-color: #FFF8E7;
-    height: 300vh;
+    background-color: var(--main-color);
+    margin: 0;
 }
