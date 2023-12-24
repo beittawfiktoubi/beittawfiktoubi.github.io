@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen:wght@400;700&display=swap');
+
 :root {
     --dark-color: #000000;
     --main-color: #FFF8E7;
+    --light-color: #ffffff;
     --font-color-dark: #282828;
     --font-color-bright: #ffffff;
 }
 
 body {
+    font-family: 'Koulen', sans-serif;
     background-color: var(--main-color);
     margin: 0;
 }
