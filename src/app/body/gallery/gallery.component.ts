@@ -21,34 +21,34 @@ export class GalleryComponent {
             src: "/assets/images/gallery/1.jpg",
             alt: "description",
         },
-        {
-            src: "/assets/images/gallery/2.jpg",
-            alt: "description",
-        },
-        {
-            src: "/assets/images/gallery/3.jpg",
-            alt: "description",
-        },
-        {
-            src: "/assets/images/gallery/4.jpg",
-            alt: "description",
-        },
-        {
-            src: "/assets/images/gallery/5.jpg",
-            alt: "description",
-        },
-        {
-            src: "/assets/images/gallery/6.jpg",
-            alt: "description",
-        },
-        {
-            src: "/assets/images/gallery/7.jpg",
-            alt: "description",
-        },
-        {
-            src: "/assets/images/gallery/8.jpg",
-            alt: "description",
-        },
+        // {
+        //     src: "/assets/images/gallery/2.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/gallery/3.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/gallery/4.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/gallery/5.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/gallery/6.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/gallery/7.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/gallery/8.jpg",
+        //     alt: "description",
+        // },
     ];
 
     public selectedImageIndex: number = 0;

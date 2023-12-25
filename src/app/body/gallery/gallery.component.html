@@ -2,7 +2,7 @@
     <div class="img-container" *ngFor="let image of images; let i = index">
         <img [src]="image.src" [alt]="image.alt" [ngClass]="
         {
-            selected: i === selectedImageIndex,
+            selected: true,
         }">
     </div>
 </div>
