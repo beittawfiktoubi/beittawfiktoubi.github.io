@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 class imageList {
@@ -10,12 +11,12 @@ class imageList {
 @Component({
     selector: 'app-gallery',
     standalone: true,
-    imports: [],
+    imports: [CommonModule],
     templateUrl: './gallery.component.html',
     styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-    private readonly images: imageList[] = [
+    public readonly images: imageList[] = [
         {
             src: "/assets/images/gallery/1.jpg",
             alt: "description",
@@ -49,5 +50,12 @@ export class GalleryComponent {
             alt: "description",
         },
     ];
+
+    public selectedImageIndex: number = 0;
+
+    ngAfterViewInit() {
+        const images = document.querySelectorAll(".img-container");
+        console.log(images);
+    }
 
 }
