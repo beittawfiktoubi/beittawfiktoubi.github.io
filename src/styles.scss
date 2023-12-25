@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen:wght@400;700&display=swap');
 
 :root {
-    --dark-color: #000000;
-    --main-color: #FFF8E7;
-    --light-color: #ffffff;
+    // font colors
     --font-color-dark: #282828;
     --font-color-bright: #ffffff;
+
+    // background colors
+    --main-color: #FFF8E7;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+
+    // light colors
+    --light-pink-color: #F9B1B1;
+    --light-blue-color: #B7BAFF;
+    --light-green-color: #C7E4BC;
+    --light-orange-color: #FEBC6D;
+
+    // dark colors
+    --dark-blue-color: #2a44ab;
 }
 
 body {

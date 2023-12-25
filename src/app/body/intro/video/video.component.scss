@@ -1,0 +1,30 @@
+:host {
+    flex: 1.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vid-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    aspect-ratio: 17/10;
+    background-color: var(--dark-color);
+    border-radius: 20px;
+}
+
+#vid-outline {
+    position: relative;
+    height: 500px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+#intro-vid {
+    position: absolute;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
