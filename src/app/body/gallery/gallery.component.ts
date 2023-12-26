@@ -21,14 +21,14 @@ export class GalleryComponent {
             src: "/assets/images/gallery/1.jpg",
             alt: "description",
         },
-        // {
-        //     src: "/assets/images/gallery/2.jpg",
-        //     alt: "description",
-        // },
-        // {
-        //     src: "/assets/images/gallery/3.jpg",
-        //     alt: "description",
-        // },
+        {
+            src: "/assets/images/gallery/2.jpg",
+            alt: "description",
+        },
+        {
+            src: "/assets/images/gallery/3.jpg",
+            alt: "description",
+        },
         // {
         //     src: "/assets/images/gallery/4.jpg",
         //     alt: "description",
@@ -51,11 +51,25 @@ export class GalleryComponent {
         // },
     ];
 
-    public selectedImageIndex: number = 0;
+    private _currentImage: number = 2;
+    private _images: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("img-container") as HTMLCollectionOf<HTMLElement>;
 
     ngAfterViewInit() {
-        const images = document.querySelectorAll(".img-container");
-        console.log(images);
+        this._images = document.getElementsByClassName("img-container") as HTMLCollectionOf<HTMLElement>;
+        this._resetArrayValues(this._images);
     }
 
+
+    sendRight() {
+        this._images[this._currentImage].style.transform = "translateX(200%)";
+        this._currentImage--;
+        this._images[this._currentImage].style.transform = "translateX(0)";
+    }
+
+    private _resetArrayValues(imgs: HTMLCollectionOf<HTMLElement>) {
+        for (let i = 0; i < imgs.length; i++) {
+            imgs[i].style.transform = "translateX(-200%)";
+        }
+        imgs[2].style.transform = "translateX(0)";
+    }
 }

@@ -1,8 +1,7 @@
+<button (click)="sendRight()">asdasd</button>
+
 <div id="slideshow">
-    <div class="img-container" *ngFor="let image of images; let i = index">
-        <img [src]="image.src" [alt]="image.alt" [ngClass]="
-        {
-            selected: true,
-        }">
+    <div class="img-container" *ngFor="let image of images">
+        <img id="img" [src]="image.src" [alt]="image.alt">
     </div>
 </div>
