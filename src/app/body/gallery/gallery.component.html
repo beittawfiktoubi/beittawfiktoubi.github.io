@@ -1,7 +1,7 @@
 <div id="slideshow">
-    <div class="img-container" *ngFor="let image of images">
+    <button class="button button-left" (click)="turnLeft()"></button>
+    <button class="button button-right" (click)="turnRight()"></button>
+    <div class="img-container" *ngFor="let image of imageList">
         <img id="img" [src]="image.src" [alt]="image.alt">
     </div>
 </div>
-<button class="aaa" (click)="turnRight()">right</button>
-<button class="aaa" (click)="turnLeft()">left</button>

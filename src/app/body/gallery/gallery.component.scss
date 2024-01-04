@@ -6,12 +6,6 @@
     height: 100vh;
 }
 
-// TODO remove
-.aaa {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 
 #slideshow {
     position: relative;
@@ -24,8 +18,28 @@
     overflow: hidden;
 }
 
+.button {
+    position: absolute;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50vw;
+    height: 100%;
+}
+
+.button-left {
+    top: 0;
+    left: 0;
+}
+
+.button-right {
+    top: 0;
+    right: 0;
+}
+
 .img-container {
-    transition: all 500ms ease-in-out;
+    transition: all 700ms ease-in-out;
     position: absolute;
     height: 100%;
     aspect-ratio: 5/3;

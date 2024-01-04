@@ -16,7 +16,7 @@ class imageList {
     styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-    public readonly images: imageList[] = [
+    public readonly imageList: imageList[] = [
         {
             src: "/assets/images/gallery/1.jpg",
             alt: "description",
@@ -59,7 +59,7 @@ export class GalleryComponent {
 
     private _currentImage: number = 0;
     private _leftZIndex: number = 0;
-    private _rightZIndex: number = this.images.length;
+    private _rightZIndex: number = this.imageList.length;
     private _images: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("img-container") as HTMLCollectionOf<HTMLElement>;
 
     ngAfterViewInit() {
@@ -92,7 +92,6 @@ export class GalleryComponent {
             this._imageMoveLeft(this._images[this._currentImage].style);
             this._currentImage++;
             this._imageMoveCenter(this._images[this._currentImage].style);
-            console.log("LEFT", this._leftZIndex, this._rightZIndex);
             this._leftZIndex++;
             this._rightZIndex--;
         }
@@ -104,17 +103,14 @@ export class GalleryComponent {
             this._imageMoveRight(this._images[this._currentImage].style);
             this._currentImage--;
             this._imageMoveCenter(this._images[this._currentImage].style);
-            console.log("right", this._leftZIndex, this._rightZIndex);
             this._leftZIndex--;
             this._rightZIndex++;
         }
     }
 
     private _resetArrayValues(imgs: HTMLCollectionOf<HTMLElement>) {
-        for (let i = 0; i < imgs.length; i++) {
+        for (let i = 1; i < imgs.length; i++) {
             this._imageMoveRight(imgs[i].style);
-        }
-        for (let i = 0; i < imgs.length; i++) {
             imgs[i].style.zIndex = `${imgs.length - i}`;
         }
         this._imageMoveCenter(imgs[0].style);
