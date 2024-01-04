@@ -1,8 +1,16 @@
 :host {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+// TODO remove
+.aaa {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #slideshow {
@@ -11,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100vw;
     height: 80%;
     overflow: hidden;
 }
