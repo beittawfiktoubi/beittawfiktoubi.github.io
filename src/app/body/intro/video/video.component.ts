@@ -10,10 +10,8 @@ import { Component } from '@angular/core';
 export class VideoComponent {
     ngOnInit() {
         const vid = document.getElementById('intro-vid') as HTMLVideoElement;
-        console.log(vid);
         vid.muted = true;
         vid.loop = true;
-        vid.play();
+        return vid.play();
     }
-
 }
