@@ -1,46 +1,55 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { CardComponent } from './card/card.component';
 
 @Component({
     selector: 'app-activities',
     standalone: true,
-    imports: [CardComponent, NgFor],
+    imports: [CardComponent, NgClass],
     templateUrl: './activities.component.html',
     styleUrl: './activities.component.scss'
 })
 export class ActivitiesComponent {
-    private _cards: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("card-container") as HTMLCollectionOf<HTMLElement>;
+    private _indexCounter: number = 0;
 
-    @ViewChild('viewChildHook', { static: true }) viewChildHook: ElementRef | undefined;
+    private _iterateValues(cc: HTMLCollectionOf<HTMLElement>) {
 
-    ngOnInit() {
-        if (this.viewChildHook != undefined) {
-            const value = getComputedStyle(this.viewChildHook.nativeElement).getPropertyValue('--my-variable-name');
-            console.log("value", value);
+        let top = getComputedStyle(cc[0]).getPropertyValue('top');
+        let left = getComputedStyle(cc[0]).getPropertyValue('left');
+        let z = getComputedStyle(cc[0]).getPropertyValue('z-index');
+
+        for (let i = 0; i < cc.length - 1; ++i) {
+            let top = getComputedStyle(cc[i + 1]).getPropertyValue('top');
+            let left = getComputedStyle(cc[i + 1]).getPropertyValue('left');
+            let z = getComputedStyle(cc[i + 1]).getPropertyValue('z-index');
+            cc[i].style.top = `${top}`;
+            cc[i].style.left = `${left}`;
+            cc[i].style.zIndex = `${z}`;
         }
+        cc[cc.length - 1].style.top = `${top}`;
+        cc[cc.length - 1].style.left = `${left}`;
+        cc[cc.length - 1].style.zIndex = `${z}`;
     }
 
-    test() {
+    async test() {
         let cc: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("card-container") as HTMLCollectionOf<HTMLElement>;
+        this._iterateValues(cc);
 
-        if (this.viewChildHook != undefined) {
-            const value = getComputedStyle(cc[1]).getPropertyValue('top');
-            // const value = getComputedStyle(this.viewChildHook.nativeElement).getPropertyValue('top');
-            console.log("value", value);
-        }
+        // last animation part
+        const frontCardIndex = cc.length - 1 - this._indexCounter;
+        const backCardIndex = (cc.length - this._indexCounter) % cc.length;
+        cc[frontCardIndex].style.visibility = "hidden";
+        cc[frontCardIndex].style.opacity = "0";
+        let left = getComputedStyle(cc[backCardIndex]).getPropertyValue('left');
+        cc[frontCardIndex].style.left = "5%";
 
-        let top = getComputedStyle(this._cards[0]).getPropertyValue('top');
-        let left = getComputedStyle(this._cards[0]).getPropertyValue('left');
-        for (let i = 0; i < this._cards.length - 1; ++i) {
-            let top = getComputedStyle(this._cards[i + 1]).getPropertyValue('top');
-            let left = getComputedStyle(this._cards[i + 1]).getPropertyValue('left');
-            console.log("top", top);
-            console.log("left", left);
-            getComputedStyle(this._cards[i]).setProperty("top", top);
-            getComputedStyle(this._cards[i]).setProperty("left", left);
-        }
-        getComputedStyle(this._cards[this._cards.length - 1]).setProperty("top", top);
-        getComputedStyle(this._cards[this._cards.length - 1]).setProperty("left", left);
+        await new Promise(f => setTimeout(f, 800));
+
+        cc[frontCardIndex].style.visibility = "visible";
+        cc[frontCardIndex].style.opacity = "1";
+        cc[frontCardIndex].style.left = left;
+
+        // inc _indexCounter
+        this._indexCounter = (this._indexCounter + 1) % cc.length;
     }
 }
