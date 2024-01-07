@@ -7,7 +7,6 @@
     width: 100vw;
 }
 
-
 #activity-container {
     display: flex;
     flex-direction: row;
@@ -49,21 +48,9 @@ svg {
     height: 100%;
 }
 
-// .visible {
-//     // transition-property: top left z-index opacity visibility;
-//     // transition-duration: 700ms;
-//     // transition-timing-function: ease-in-out;
-//     visibility: visible;
-//     opacity: 1;
-// }
-
-// .hidden {
-//     transition-property: top left z-index opacity visibility;
-//     transition-duration: 100ms;
-//     transition-timing-function: ease-in-out;
-//     visibility: hidden;
-//     opacity: 0;
-// }
+.card-container:hover {
+    cursor: pointer;
+}
 
 @for $i from 1 through 4 {
     .card-container:nth-child(#{$i}) {
