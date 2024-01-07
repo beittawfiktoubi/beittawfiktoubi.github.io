@@ -1,1 +1,24 @@
-<p>activities works!</p>
+<div id="activity-container">
+    <div id="imgs-container">
+        <button (click)="test()"> asd</button>
+    </div>
+    <div id="cards-container">
+        <div #viewChildHook class="card-container">
+            <app-card class="card" [fillTop]="'#F9B1B1'"></app-card>
+        </div>
+        <div class="card-container">
+            <app-card class="card" [fillTop]="'lightyellow'"></app-card>
+        </div>
+        <div class="card-container">
+            <app-card class="card" [fillTop]="'lightgreen'"></app-card>
+        </div>
+        <div class="card-container">
+            <app-card class="card" [fillTop]="'lightblue'"></app-card>
+        </div>
+        <!-- TODO -->
+        <!-- <svg>
+            <line x1='0' y1='100%' x2='100%' y2='0' />
+            <line x1='0' y1='0' x2='100%' y2='100%' />
+        </svg> -->
+    </div>
+</div>

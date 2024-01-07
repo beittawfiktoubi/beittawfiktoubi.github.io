@@ -1,0 +1,57 @@
+:host {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#activity-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    background-color: black;
+}
+
+#imgs-container {
+    flex: 2;
+    height: 90%;
+    background-color: lightgreen;
+}
+
+#cards-container {
+    flex: 1.5;
+    position: relative;
+    height: 90%;
+    background-color: grey;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    line {
+        stroke: #000000;
+        stroke-width: 1;
+    }
+}
+
+.card-container {
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@for $i from 1 through 4 {
+    .card-container:nth-child(#{$i}) {
+        top: calc(13% + ($i * 5px));
+        left: calc(5% + ($i * 12px));
+    }
+}
