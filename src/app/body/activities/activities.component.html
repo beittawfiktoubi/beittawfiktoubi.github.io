@@ -1,5 +1,8 @@
 <div id="activity-container">
     <div id="imgs-container">
+        <div class="asdimg-container" *ngFor="let image of imageList">
+            <img id="img" [src]="image.src" [alt]="image.alt">
+        </div>
     </div>
     <div id="cards-container">
         <div class="card-container">

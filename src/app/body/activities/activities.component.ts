@@ -1,15 +1,36 @@
 import { Component } from '@angular/core';
-import { NgClass } from '@angular/common';
-import { CardComponent } from './card/card.component';
+
+class imageList {
+    constructor(
+        public src: string,
+        public alt: string
+    ) { }
+}
 
 @Component({
     selector: 'app-activities',
-    standalone: true,
-    imports: [CardComponent, NgClass],
     templateUrl: './activities.component.html',
     styleUrl: './activities.component.scss'
 })
 export class ActivitiesComponent {
+    public readonly imageList: imageList[] = [
+        {
+            src: "/assets/images/activities/1.jpg",
+            alt: "description",
+        },
+        // {
+        //     src: "/assets/images/activities/2.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/activities/3.jpg",
+        //     alt: "description",
+        // },
+        // {
+        //     src: "/assets/images/activities/4.jpg",
+        //     alt: "description",
+        // },
+    ];
     public isButtonDisabled: boolean = false;
     private _indexCounter: number = 0;
 
