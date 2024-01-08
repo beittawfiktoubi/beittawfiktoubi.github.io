@@ -1,18 +1,21 @@
 <div id="activity-container">
     <div id="imgs-container">
-        <button (click)="test()"> asd</button>
     </div>
     <div id="cards-container">
         <div class="card-container">
+            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'#F9B1B1'"></app-card>
         </div>
         <div class="card-container">
+            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'lightyellow'"></app-card>
         </div>
         <div class="card-container">
+            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'lightgreen'"></app-card>
         </div>
         <div class="card-container">
+            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'lightblue'"></app-card>
         </div>
         <!-- TODO -->

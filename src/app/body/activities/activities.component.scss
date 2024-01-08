@@ -25,37 +25,48 @@
 
 #cards-container {
     flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     height: 90%;
     background-color: grey;
 }
 
-svg {
-    width: 100%;
-    height: 100%;
+.btn {
     position: absolute;
-
-    line {
-        stroke: #000000;
-        stroke-width: 1;
-    }
+    z-index: 100;
+    // background-color: blue;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
 
+
+// todo
+// svg {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+
+//     line {
+//         stroke: #000000;
+//         stroke-width: 1;
+//     }
+// }
+
 .card-container {
-    transition: opacity 200ms linear, visibility 200ms linear, top 700ms ease-in-out, left 700ms ease-in-out, z-index 700ms ease-in-out;
+    transition: transform 500ms ease-in-out, opacity 200ms linear, visibility 200ms linear, top 700ms ease-in-out, left 700ms ease-in-out, z-index 700ms ease-in-out;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    height: 70%;
+    width: 50%;
+    transform: scale(1);
 }
 
 .card-container:hover {
-    cursor: pointer;
-}
+    transition: transform 500ms ease-in-out 700ms, opacity 200ms linear, visibility 200ms linear, top 700ms ease-in-out, left 700ms ease-in-out, z-index 700ms ease-in-out;
 
-@for $i from 1 through 4 {
-    .card-container:nth-child(#{$i}) {
-        top: calc(13% + ($i * 5px));
-        left: calc(5% + ($i * 12px));
-        z-index: $i;
-    }
+    transform: scale(1.025);
 }

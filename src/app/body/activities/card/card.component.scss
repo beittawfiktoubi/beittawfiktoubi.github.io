@@ -1,12 +1,17 @@
-:host {
+// :host {
+//     height: 100%;
+//     width: 100%;
+// }
+
+svg {
     height: 100%;
     width: 100%;
 }
 
-svg {
-    height: 70%;
-    width: 70%;
-}
+// svg:hover {
+//     height: 110%;
+//     width: 110%;
+// }
 
 #bottom {
     fill: #EEEFE7;

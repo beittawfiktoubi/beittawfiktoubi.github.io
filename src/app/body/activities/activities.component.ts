@@ -10,7 +10,17 @@ import { CardComponent } from './card/card.component';
     styleUrl: './activities.component.scss'
 })
 export class ActivitiesComponent {
+    public isButtonDisabled: boolean = false;
     private _indexCounter: number = 0;
+
+    ngAfterViewInit() {
+        let cc: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("card-container") as HTMLCollectionOf<HTMLElement>;
+        for (let i = 0; i < cc.length; ++i) {
+            cc[i].style.top = `calc(13% + (${i + 1} * 5px))`;
+            cc[i].style.left = `calc(16% + (${i + 1} * 12px))`;
+            cc[i].style.zIndex = `${i + 1}`;
+        }
+    }
 
     private _iterateValues(cc: HTMLCollectionOf<HTMLElement>) {
 
@@ -31,7 +41,8 @@ export class ActivitiesComponent {
         cc[cc.length - 1].style.zIndex = `${z}`;
     }
 
-    async test() {
+    async flipCards() {
+        this.isButtonDisabled = true;
         let cc: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("card-container") as HTMLCollectionOf<HTMLElement>;
         this._iterateValues(cc);
 
@@ -51,5 +62,8 @@ export class ActivitiesComponent {
 
         // inc _indexCounter
         this._indexCounter = (this._indexCounter + 1) % cc.length;
+        await new Promise(f => setTimeout(f, 1000));
+        this.isButtonDisabled = false;
+
     }
 }
