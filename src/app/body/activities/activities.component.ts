@@ -18,18 +18,18 @@ export class ActivitiesComponent {
             src: "/assets/images/activities/1.jpg",
             alt: "description",
         },
-        // {
-        //     src: "/assets/images/activities/2.jpg",
-        //     alt: "description",
-        // },
-        // {
-        //     src: "/assets/images/activities/3.jpg",
-        //     alt: "description",
-        // },
-        // {
-        //     src: "/assets/images/activities/4.jpg",
-        //     alt: "description",
-        // },
+        {
+            src: "/assets/images/activities/2.jpg",
+            alt: "description",
+        },
+        {
+            src: "/assets/images/activities/3.jpg",
+            alt: "description",
+        },
+        {
+            src: "/assets/images/activities/4.jpg",
+            alt: "description",
+        },
     ];
     public isButtonDisabled: boolean = false;
     private _indexCounter: number = 0;
@@ -40,6 +40,15 @@ export class ActivitiesComponent {
             cc[i].style.top = `calc(13% + (${i + 1} * 5px))`;
             cc[i].style.left = `calc(16% + (${i + 1} * 12px))`;
             cc[i].style.zIndex = `${i + 1}`;
+        }
+        this._initImages();
+    }
+
+    private _initImages() {
+        let l: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("act-img-container") as HTMLCollectionOf<HTMLElement>;
+
+        for (let i = 1; i < l.length; ++i) {
+            l[i].classList.add("act-hidden");
         }
     }
 
@@ -62,8 +71,16 @@ export class ActivitiesComponent {
         cc[cc.length - 1].style.zIndex = `${z}`;
     }
 
-    async flipCards() {
+    private async _changeImage(frontCardIndex: number, backCardIndex: number) {
+        let l: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("act-img-container") as HTMLCollectionOf<HTMLElement>;
+
+        l[backCardIndex].classList.add("act-hidden");
+        l[frontCardIndex].classList.remove("act-hidden");
+    }
+
+    public async flipCards() {
         this.isButtonDisabled = true;
+
         let cc: HTMLCollectionOf<HTMLElement> = document.getElementsByClassName("card-container") as HTMLCollectionOf<HTMLElement>;
         this._iterateValues(cc);
 
@@ -75,6 +92,7 @@ export class ActivitiesComponent {
         let left = getComputedStyle(cc[backCardIndex]).getPropertyValue('left');
         cc[frontCardIndex].style.left = "5%";
 
+        this._changeImage(frontCardIndex, backCardIndex);
         await new Promise(f => setTimeout(f, 800));
 
         cc[frontCardIndex].style.visibility = "visible";

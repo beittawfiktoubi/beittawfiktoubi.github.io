@@ -1,24 +1,24 @@
 <div id="activity-container">
-    <div id="imgs-container">
-        <div class="asdimg-container" *ngFor="let image of imageList">
-            <img id="img" [src]="image.src" [alt]="image.alt">
+    <div id="act-imgs-container">
+        <div class="act-img-container" *ngFor="let image of imageList">
+            <img id="act-img" [src]="image.src" [alt]="image.alt">
         </div>
     </div>
     <div id="cards-container">
         <div class="card-container">
-            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
-            <app-card class="card visible" [fillTop]="'#F9B1B1'"></app-card>
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <app-card class="card visible" [fillTop]="' #F9B1B1'"></app-card>
         </div>
         <div class="card-container">
-            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'lightyellow'"></app-card>
         </div>
         <div class="card-container">
-            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'lightgreen'"></app-card>
         </div>
         <div class="card-container">
-            <button class="btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
             <app-card class="card visible" [fillTop]="'lightblue'"></app-card>
         </div>
         <!-- TODO -->
