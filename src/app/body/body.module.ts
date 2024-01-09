@@ -6,13 +6,14 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { ReadMoreComponent } from './read-more/read-more.component';
 import { FooterComponent } from './footer/footer.component';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './act-card/act-card.component';
 import { VideoComponent } from './intro/video/video.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReadMoreCardComponent } from './read-more-card/read-more-card.component';
 
 
 @NgModule({
-    declarations: [NavbarComponent, GalleryComponent, ActivitiesComponent, CardComponent, VideoComponent, HeaderComponent, IntroComponent, ReadMoreComponent, FooterComponent],
+    declarations: [ReadMoreCardComponent, NavbarComponent, GalleryComponent, ActivitiesComponent, CardComponent, VideoComponent, HeaderComponent, IntroComponent, ReadMoreComponent, FooterComponent],
     imports: [
         CommonModule
     ],

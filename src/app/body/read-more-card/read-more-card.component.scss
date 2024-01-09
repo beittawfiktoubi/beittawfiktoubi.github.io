@@ -1,0 +1,12 @@
+:host {
+    position: sticky;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-pink-color);
+    border-radius: 20px;
+    aspect-ratio: 2/1;
+    height: 25vmin;
+    opacity: .8;
+}
