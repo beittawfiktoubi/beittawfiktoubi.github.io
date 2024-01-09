@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300vh;
+    height: 400vh;
     background-color: rgb(242, 250, 183);
 }
 
@@ -29,13 +29,17 @@
 }
 
 .rm-card-con:nth-child(1) {
-    top: 50vw;
+    top: 0vw;
 }
 
 .rm-card-con:nth-child(2) {
-    top: 100vw;
+    top: 80vh;
 }
 
 .rm-card-con:nth-child(3) {
-    top: 150vw;
+    top: 200vh;
+}
+
+.rm-card-con:nth-child(4) {
+    top: 300vh;
 }
