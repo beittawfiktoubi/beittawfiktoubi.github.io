@@ -1,1 +1,30 @@
-<p>activities works!</p>
+<div id="activity-container">
+    <div id="act-imgs-container">
+        <div class="act-img-container" *ngFor="let image of imageList">
+            <img id="act-img" [src]="image.src" [alt]="image.alt">
+        </div>
+    </div>
+    <div id="cards-container">
+        <div class="card-container">
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <app-card class="card visible" [fillTop]="' #F9B1B1'"></app-card>
+        </div>
+        <div class="card-container">
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <app-card class="card visible" [fillTop]="'lightyellow'"></app-card>
+        </div>
+        <div class="card-container">
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <app-card class="card visible" [fillTop]="'lightgreen'"></app-card>
+        </div>
+        <div class="card-container">
+            <button class="act-btn" (click)="flipCards()" [attr.disabled]="isButtonDisabled ? '' : null"></button>
+            <app-card class="card visible" [fillTop]="'lightblue'"></app-card>
+        </div>
+        <!-- TODO -->
+        <!-- <svg>
+            <line x1='0' y1='100%' x2='100%' y2='0' />
+            <line x1='0' y1='0' x2='100%' y2='100%' />
+        </svg> -->
+    </div>
+</div>

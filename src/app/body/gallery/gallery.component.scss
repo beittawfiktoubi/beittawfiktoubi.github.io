@@ -6,7 +6,6 @@
     height: 100vh;
 }
 
-
 #slideshow {
     position: relative;
     flex: 1;
@@ -28,12 +27,12 @@
     height: 100%;
 }
 
-.button-left {
+.button-right {
     top: 0;
     left: 0;
 }
 
-.button-right {
+.button-left {
     top: 0;
     right: 0;
 }
