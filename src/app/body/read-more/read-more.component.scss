@@ -3,43 +3,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400vh;
+    height: 300vh;
     background-color: rgb(242, 250, 183);
+    padding-bottom: 100vh;
 }
 
 #rm-con {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    // justify-content: center;
-    gap: 2vw;
     height: 100%;
     width: 50vw;
     background-color: rgb(170, 233, 156);
 }
 
 .rm-card-con {
-    position: absolute;
-}
-
-.rm-card-con[data-pos="fixed"] {
-    position: fixed;
+    position: sticky;
 }
 
 .rm-card-con:nth-child(1) {
-    top: 0vw;
+    top: 50px;
 }
 
 .rm-card-con:nth-child(2) {
-    top: 80vh;
+    top: 70px;
 }
 
 .rm-card-con:nth-child(3) {
-    top: 200vh;
+    top: 90px;
 }
 
 .rm-card-con:nth-child(4) {
-    top: 300vh;
+    top: 110px;
+}
+
+// TODO
+#empty {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(170, 233, 156);
 }
