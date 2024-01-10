@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     height: 300vh;
-    background-color: rgb(242, 250, 183);
     padding-bottom: 100vh;
 }
 
@@ -15,7 +14,7 @@
     align-items: center;
     height: 100%;
     width: 50vw;
-    background-color: rgb(170, 233, 156);
+    margin-top: 50vmin;
 }
 
 .rm-card-con {
@@ -23,24 +22,23 @@
 }
 
 .rm-card-con:nth-child(1) {
-    top: 50px;
+    top: 200px;
 }
 
 .rm-card-con:nth-child(2) {
-    top: 70px;
+    top: 200px + 30px;
 }
 
 .rm-card-con:nth-child(3) {
-    top: 90px;
+    top: 200px + 30px + 30px;
 }
 
 .rm-card-con:nth-child(4) {
-    top: 110px;
+    top: 200px + 30px + 30px + 30px;
 }
 
 // TODO
 #empty {
     height: 100px;
     width: 100%;
-    background-color: rgb(170, 233, 156);
 }
