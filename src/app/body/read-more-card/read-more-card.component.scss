@@ -1,0 +1,14 @@
+:host {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    aspect-ratio: 2/1;
+    height: 35vmin;
+    border-bottom: solid 10px;
+}

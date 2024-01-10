@@ -2,13 +2,14 @@
 
 :root {
     // font colors
-    --font-color-dark: #282828;
+    --font-color-dark: #525252;
     --font-color-bright: #ffffff;
 
     // background colors
     --main-color: #FFF8E7;
     --light-color: #ffffff;
     --dark-color: #000000;
+    --yellow-color: #f6d4b1;
 
     // light colors
     --light-pink-color: #F9B1B1;
@@ -25,4 +26,9 @@ body {
     font-family: 'Koulen', sans-serif;
     background-color: var(--main-color);
     margin: 0;
+}
+
+h1,
+h3 {
+    color: var(--font-color-dark);
 }
