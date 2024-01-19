@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300vh;
-    padding-bottom: 100vh;
+    height: 370vh;
+    padding-bottom: 30vh;
 }
 
 // TODO maybe add flex 1
@@ -14,8 +14,9 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 50vw;
+    width: 70vw;
     margin-top: 50vmin;
+    // background-color: lightblue;
 }
 
 .rm-card-con {
@@ -23,19 +24,19 @@
 }
 
 .rm-card-con:nth-child(1) {
-    top: 200px;
+    top: 100px;
 }
 
 .rm-card-con:nth-child(2) {
-    top: 200px + 30px;
+    top: 100px + 40px;
 }
 
 .rm-card-con:nth-child(3) {
-    top: 200px + 30px + 30px;
+    top: 100px + 40px + 40px;
 }
 
 .rm-card-con:nth-child(4) {
-    top: 200px + 30px + 30px + 30px;
+    top: 100px + 40px + 40px + 40px;
 }
 
 // TODO
