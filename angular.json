@@ -13,10 +13,19 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "he": {
+            "translation": "src/locale/messages.he.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/tobi",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -35,6 +44,9 @@
             "scripts": []
           },
           "configurations": {
+            "he": {
+                "localize": ["he"]
+            },
             "production": {
               "budgets": [
                 {
@@ -69,6 +81,9 @@
             },
             "development": {
               "buildTarget": "tobi:build:development"
+            },
+            "he": {
+                "buildTarget": "tobi:build:development,he"
             }
           },
           "defaultConfiguration": "development"
