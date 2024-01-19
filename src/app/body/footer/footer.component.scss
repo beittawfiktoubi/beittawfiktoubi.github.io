@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.fot-grid-con {
+    // background-color: blue;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 10vh;
+}
+
+.fot-item-con {
+    padding-left: 20px;
+}
+
+.fot-item-con p,
+.fot-item-con h3 {
+    color: white;
+}
