@@ -2,12 +2,28 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="3964919876711037238" datatype="html">
-        <source>hello</source>
-        <target>שלום</target>
+      <trans-unit id="2181154762165715522" datatype="html">
+        <source>Gallery</source>
+        <target>גלריה</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="sourcefile">src/app/body/navbar/navbar.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5729418620241283277" datatype="html">
+        <source>Events</source>
+        <target>אירועים</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/body/navbar/navbar.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="115930618352415341" datatype="html">
+        <source>Read More</source>
+        <target>קרא עוד</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/body/navbar/navbar.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
     </body>
