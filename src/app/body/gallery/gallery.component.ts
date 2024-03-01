@@ -48,11 +48,15 @@ export class GalleryComponent {
         },
     ];
 
-    private readonly MOVE_LEFT: string = "translateX(-80vw)";
-    private readonly MOVE_RIGHT: string = "translateX(80vw)";
+    private readonly MOVE_LEFT: string = "translateX(-120%)";
+    private readonly MOVE_RIGHT: string = "translateX(120%)";
     private readonly MOVE_CENTER: string = "translateX(0)";
     private readonly SMALL_SIZE: string = "0.8";
     private readonly REGULAR_SIZE: string = "1";
+    private readonly TO_DARKNESS: string = "brightness(60%)";
+    private readonly TO_BRIGHTNESS: string = "brightness(100%)";
+    private readonly TO_BLUER: string = "blur(2px)";
+    private readonly TO_CLEAR: string = "blur(0)";
 
     private _currentImage: number = 0;
     private _leftZIndex: number = 0;
@@ -67,12 +71,14 @@ export class GalleryComponent {
     private _imageMoveLeft(img: CSSStyleDeclaration) {
         img.transform = this.MOVE_LEFT;
         img.scale = this.SMALL_SIZE;
+        img.filter = this.TO_DARKNESS + this.TO_BLUER;
         img.zIndex = this._leftZIndex.toString();
     }
 
     private _imageMoveCenter(img: CSSStyleDeclaration) {
         img.transform = this.MOVE_CENTER;
         img.scale = this.REGULAR_SIZE;
+        img.filter = this.TO_BRIGHTNESS; + this.TO_CLEAR;
         img.zIndex = Math.max(this._rightZIndex, this._leftZIndex).toString();
 
     }
@@ -80,6 +86,7 @@ export class GalleryComponent {
     private _imageMoveRight(img: CSSStyleDeclaration) {
         img.transform = this.MOVE_RIGHT;
         img.scale = this.SMALL_SIZE;
+        img.filter = this.TO_DARKNESS + this.TO_BLUER;
         img.zIndex = this._rightZIndex.toString();
     }
 
