@@ -10,13 +10,33 @@ import { CardComponent } from './act-card/act-card.component';
 import { VideoComponent } from './intro/video/video.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReadMoreCardComponent } from './read-more-card/read-more-card.component';
+import { LogoComponent } from './logo/logo.component';
 
 
 @NgModule({
-    declarations: [ReadMoreCardComponent, NavbarComponent, GalleryComponent, ActivitiesComponent, CardComponent, VideoComponent, HeaderComponent, IntroComponent, ReadMoreComponent, FooterComponent],
+    declarations: [
+        ReadMoreCardComponent,
+        NavbarComponent,
+        GalleryComponent,
+        ActivitiesComponent,
+        CardComponent,
+        VideoComponent,
+        HeaderComponent,
+        IntroComponent,
+        ReadMoreComponent,
+        FooterComponent,
+        LogoComponent,
+    ],
     imports: [
         CommonModule
     ],
-    exports: [HeaderComponent, IntroComponent, GalleryComponent, ActivitiesComponent, ReadMoreComponent, FooterComponent]
+    exports: [
+        HeaderComponent,
+        IntroComponent,
+        GalleryComponent,
+        ActivitiesComponent,
+        ReadMoreComponent,
+        FooterComponent,
+    ],
 })
 export class BodyModule { }
