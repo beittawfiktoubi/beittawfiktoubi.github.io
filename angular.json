@@ -18,6 +18,9 @@
         "locales": {
           "he": {
             "translation": "src/locale/messages.he.xlf"
+          },
+          "en": {
+            "translation": "src/locale/messages.xlf"
           }
         }
       },
@@ -46,6 +49,9 @@
           "configurations": {
             "he": {
                 "localize": ["he"]
+            },
+            "en": {
+                "localize": ["en"]
             },
             "production": {
               "budgets": [
@@ -84,6 +90,9 @@
             },
             "he": {
                 "buildTarget": "tobi:build:development,he"
+            },
+            "en": {
+                "buildTarget": "tobi:build:development,en"
             }
           },
           "defaultConfiguration": "development"
