@@ -1,9 +1,9 @@
-:host {
+#intro-con {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    height: 85vh;
+    height: 100vh;
 }
 
 #text-container {
@@ -12,5 +12,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 35vh;
+    padding-bottom: 20vh;
+    text-shadow: -3px 6px 10px rgba(0, 0, 0, 0.37)
 }

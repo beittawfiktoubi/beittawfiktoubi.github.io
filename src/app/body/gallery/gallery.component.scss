@@ -1,8 +1,14 @@
-:host {
+#gallery-cop-con {
+    height: 100vh;
+    background-color: lightgray;
+}
+
+#text-con {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    margin-bottom: 2vh;
 }
 
 #slideshow {
@@ -38,7 +44,7 @@
 .img-container {
     transition: all 700ms ease-in-out;
     position: absolute;
-    height: 100%;
+    height: 80%;
     aspect-ratio: 5/3;
     overflow: hidden;
 }

@@ -52,4 +52,8 @@ export class HeaderComponent {
             }
         }
     }
+
+    public hideHeader() {
+        this.header.nativeElement.style.transform = this.MOVE_UP;
+    }
 }

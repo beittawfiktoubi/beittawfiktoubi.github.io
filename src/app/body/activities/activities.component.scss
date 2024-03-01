@@ -1,17 +1,15 @@
 :host {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
 }
 
 #activity-container {
+    position: relative;
     display: flex;
     flex: 1;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 80vh;
 }
 
 #act-imgs-container {
@@ -88,4 +86,11 @@
     transition: transform 500ms ease-in-out 700ms, opacity 200ms linear, visibility 200ms linear, top 700ms ease-in-out, left 700ms ease-in-out, z-index 700ms ease-in-out;
 
     transform: scale(1.025);
+}
+
+#activity-text-con {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
