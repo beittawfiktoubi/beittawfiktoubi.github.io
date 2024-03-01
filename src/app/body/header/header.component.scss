@@ -1,30 +1,28 @@
-:host {
+#header-con-id {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: var(--dark-color);
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    gap: 30vw;
-    height: 15vh;
+    height: 150px;
     flex-direction: row;
+
+    // animation
+    transition-duration: 1500ms;
 }
 
-.logo-container {
-    display: flex;
+#header-left-con {
     flex: 1;
-    align-items: center;
-    justify-content: center;
 }
 
-.logo-container svg {
-    fill: var(--light-color);
-    width: 128px;
-    height: 15vh;
+#logo-con {
+    margin-left: 10vw;
+    width: 150px;
 }
 
 app-navbar {
-    flex: 4;
+    flex: 1;
 }
