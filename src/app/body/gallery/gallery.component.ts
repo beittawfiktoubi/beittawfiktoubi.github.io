@@ -93,22 +93,26 @@ export class GalleryComponent {
     // <---- img
     turnLeft() {
         if (this._currentImage >= 0 && this._currentImage < this._images.length - 1) {
+            const oldIndex = this._currentImage;
             this._imageMoveLeft(this._images[this._currentImage].style);
             this._currentImage++;
             this._imageMoveCenter(this._images[this._currentImage].style);
             this._leftZIndex++;
             this._rightZIndex--;
+            this._changeDots(oldIndex, this._currentImage)
         }
     }
 
     // img ---->
     turnRight() {
         if (this._currentImage > 0 && this._currentImage <= this._images.length - 1) {
+            const oldIndex = this._currentImage;
             this._imageMoveRight(this._images[this._currentImage].style);
             this._currentImage--;
             this._imageMoveCenter(this._images[this._currentImage].style);
             this._leftZIndex--;
             this._rightZIndex++;
+            this._changeDots(oldIndex, this._currentImage)
         }
     }
 
@@ -118,5 +122,12 @@ export class GalleryComponent {
             imgs[i].style.zIndex = `${imgs.length - i}`;
         }
         this._imageMoveCenter(imgs[0].style);
+        this._changeDots(0, 0)
+    }
+
+    private _changeDots(lastIndex: number, newIndex: number) {
+        let dots = document.getElementsByClassName("dot-con");
+        dots[lastIndex].classList.remove("big-dot-con");
+        dots[newIndex].classList.add("big-dot-con");
     }
 }
