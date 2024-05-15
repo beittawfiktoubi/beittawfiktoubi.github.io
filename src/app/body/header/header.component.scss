@@ -1,28 +1,38 @@
-#header-con-id {
-    position: fixed;
+:host {
+    display: block;
+    height: 100vh;
+    height: 100svh;
     width: 100%;
-    z-index: 1000;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--dark-color);
-    height: 150px;
-    flex-direction: row;
-
-    // animation
-    transition-duration: 1500ms;
+    background: var(--dark-bg);
+    transition: height 1s ease-in-out
 }
 
-#header-left-con {
-    flex: 1;
+app-logo {
+    height: 280px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#logo-con {
-    margin-left: 10vw;
-    width: 150px;
+h1 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-app-navbar {
-    flex: 1;
+:host.active {
+    height: 8vh;
+    height: 8svh;
 }
+
+// app-logo.active {
+//     height: 40px;
+//     aspect-ratio: 1/1;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     // transform: translate(-50%, -50%);
+// }

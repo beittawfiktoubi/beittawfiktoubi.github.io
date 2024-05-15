@@ -28,7 +28,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": true,
             "outputPath": "dist/tobi",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -48,12 +47,17 @@
           },
           "configurations": {
             "he": {
-                "localize": ["he"]
+              "localize": [
+                "he"
+              ]
             },
             "en": {
-                "localize": ["en"]
+              "localize": [
+                "en"
+              ]
             },
             "production": {
+              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -69,6 +73,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -89,10 +94,10 @@
               "buildTarget": "tobi:build:development"
             },
             "he": {
-                "buildTarget": "tobi:build:development,he"
+              "buildTarget": "tobi:build:development,he"
             },
             "en": {
-                "buildTarget": "tobi:build:development,en"
+              "buildTarget": "tobi:build:development,en"
             }
           },
           "defaultConfiguration": "development"

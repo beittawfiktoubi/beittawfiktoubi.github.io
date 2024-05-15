@@ -4,26 +4,10 @@
 
 
 :root {
-    // font colors
-    --font-color-dark: #525252;
-    --font-color-bright: #ffffff;
-
-    // background colors
-    --main-color: #FFF8E7;
-    --background-color: linear-gradient(17.72deg, #edcff493 15.06%, #f8d3d1c3 94.05%);
-    --light-color: #ffffff;
-    --dark-color: #000000;
-    --yellow-color: #f6d4b1;
-
-    // light colors
-    --light-pink-color: #F9B1B1;
-    --light-blue-color: #B7BAFF;
-    --light-green-color: #C7E4BC;
-    --light-orange-color: #FEBC6D;
-    --light-gray-color: #dcdcdc;
-
-    // dark colors
-    --dark-blue-color: #2a44ab;
+    // colors
+    --dark-bg: rgb(25, 25, 25);
+    --font-bright: white;
+    --bright: white;
 }
 
 .image-border {
@@ -40,5 +24,5 @@ body {
 
 h1,
 h3 {
-    color: var(--font-color-dark);
+    color: var(--font-bright);
 }
