@@ -11,6 +11,7 @@ import { VideoComponent } from './intro/video/video.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReadMoreCardComponent } from './read-more-card/read-more-card.component';
 import { LogoComponent } from './logo/logo.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -26,11 +27,13 @@ import { LogoComponent } from './logo/logo.component';
         ReadMoreComponent,
         FooterComponent,
         LogoComponent,
+        LoaderComponent,
     ],
     imports: [
         CommonModule
     ],
     exports: [
+        LoaderComponent,
         HeaderComponent,
         IntroComponent,
         GalleryComponent,

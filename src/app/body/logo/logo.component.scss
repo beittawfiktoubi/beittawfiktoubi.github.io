@@ -1,7 +1,21 @@
-svg {
-    transition: height 1s ease-in-out
-}
-
 #logo {
     fill: var(--bright);
+}
+
+#logo.animate {
+    animation: changeColor 5s ease infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        fill-opacity: 1;
+    }
+
+    50% {
+        fill-opacity: .6;
+    }
+
+    100% {
+        fill-opacity: 1;
+    }
 }

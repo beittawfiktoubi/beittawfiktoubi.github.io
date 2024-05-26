@@ -18,8 +18,9 @@
 body {
     list-style-type: none; // ul
     font-family: 'Cormorant+Garamond', 'Heebo', 'IBM+Plex+Sans+Arabic', sans-serif;
-    background: var(--background-color);
+    background: var(--dark-bg);
     margin: 0;
+    padding: 0;
 }
 
 h1,

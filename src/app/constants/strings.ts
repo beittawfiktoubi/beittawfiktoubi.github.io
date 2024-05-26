@@ -1,0 +1,1 @@
+export const imagesPaths = ["/assets/images/activities/1.jpg", "/assets/images/activities/2.jpg"]
