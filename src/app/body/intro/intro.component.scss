@@ -3,17 +3,16 @@
     height: inherit;
     position: relative;
 
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    gap: 60px;
+
+    background-image: url("../../../assets/background/0.png");
 }
 
 #text-container {
-    background: lightcoral;
-}
-
-app-video {
-    width: 100%;
+    margin: 0 40px;
+    margin-top: 100px;
 }

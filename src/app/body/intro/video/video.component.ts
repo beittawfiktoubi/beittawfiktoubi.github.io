@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-video',
@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
     styleUrl: './video.component.scss'
 })
 export class VideoComponent {
-    ngOnInit() {
-        const vid = document.getElementById('intro-vid') as HTMLVideoElement;
-        vid.muted = true;
-        vid.loop = true;
-        return vid.play();
+    @ViewChild('video') video!: ElementRef<HTMLVideoElement>;
+    ngAfterViewInit() {
+        this.video.nativeElement.muted = true;
+        this.video.nativeElement.loop = true;
+        this.video.nativeElement.play();
     }
 }

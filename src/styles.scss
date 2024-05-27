@@ -7,6 +7,7 @@
     // colors
     --dark-bg: rgb(25, 25, 25);
     --font-bright: white;
+    --font-dark: var(--dark-bg);
     --bright: white;
 }
 
@@ -34,5 +35,5 @@ body {
 
 h1,
 h3 {
-    color: var(--font-bright);
+    color: var(--font-dark);
 }

@@ -1,25 +1,11 @@
 :host {
-    flex: 1.7;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#vid-box {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 55vh;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    // border-radius: 20px;
-    // border: 2px solid black;
-    box-shadow: -10px 15px 7px rgba(0, 0, 0, 0.2);
-}
-
-#intro-vid {
-    position: absolute;
-    width: 100%;
+video {
+    width: 90%;
+    height: 100%;
+    border: none;
 }
