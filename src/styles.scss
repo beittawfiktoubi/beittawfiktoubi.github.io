@@ -15,12 +15,18 @@
     border: 2px solid black;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body {
     list-style-type: none; // ul
     font-family: 'Cormorant+Garamond', 'Heebo', 'IBM+Plex+Sans+Arabic', sans-serif;
     background: var(--dark-bg);
     margin: 0;
     padding: 0;
+    width: 100%;
+    // overflow: hidden;
 }
 
 h1,
