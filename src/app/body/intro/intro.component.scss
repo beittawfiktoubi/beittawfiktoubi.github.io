@@ -1,17 +1,19 @@
-#intro-con {
+:host {
+    scroll-snap-align: start;
+    height: inherit;
+    position: relative;
+
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
-    height: 115vh;
 }
 
 #text-container {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20vh;
-    // text-shadow: -3px 6px 10px rgba(0, 0, 0, 0.37)
+    background: lightcoral;
+}
+
+app-video {
+    width: 100%;
 }

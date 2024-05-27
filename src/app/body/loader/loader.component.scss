@@ -1,5 +1,9 @@
 :host {
-    height: 100svh;
+    scroll-snap-align: start;
+    height: inherit;
+    position: relative;
+
+
     width: 100%;
     display: flex;
     flex-direction: column;

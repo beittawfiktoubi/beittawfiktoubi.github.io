@@ -15,8 +15,12 @@
     border: 2px solid black;
 }
 
-html {
-    scroll-snap-type: y mandatory;
+
+html,
+body {
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
 }
 
 body {
@@ -26,7 +30,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    // overflow: hidden;
 }
 
 h1,
