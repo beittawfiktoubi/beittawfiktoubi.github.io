@@ -2,6 +2,8 @@ import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { LoaderComponent } from './body/loader/loader.component';
 import { imagesPaths } from './constants/strings';
 import { sleep } from './utils/misc';
+import { Loader } from './utils/loader';
+import { IntroComponent } from './body/intro/intro.component';
 
 @Component({
     selector: 'app-root',
@@ -11,22 +13,25 @@ import { sleep } from './utils/misc';
 export class AppComponent {
     readonly CHECK_INTERVAL = 1000;
     title = 'Biet Tubi';
-    isLoading: boolean = true;
 
     intervalId: any;
-    countImagesLoaded: number = 0;
+
+    loader: Loader = new Loader
+    isLoading: boolean = true
 
     @ViewChild('container', { read: ViewContainerRef, static: true }) container!: ViewContainerRef;
 
     ngAfterViewInit() {
-        this.loadDependencies();
+        this.loader.loadDependencies();
         this.intervalId = setInterval(() => {
             this.checkDependencies()
         }, this.CHECK_INTERVAL);
     }
 
     checkDependencies = () => {
-        if (this.countImagesLoaded === imagesPaths.length) {
+        console.log('checkDependencies', this.loader.isDone)
+
+        if (this.loader.isDone) {
             this.isLoading = false
             clearInterval(this.intervalId)
             this.createAllComponents()
@@ -34,25 +39,13 @@ export class AppComponent {
     }
 
     createAllComponents() {
-        // this.container.clear();
-        // const ref = this.container.createComponent(LoaderComponent);
+        this.container.clear();
+        const ref = this.container.createComponent(IntroComponent);
     }
 
-    async loadDependencies() {
-        this.loadImages()
-    }
 
-    async loadImages() {
-        for (const p of imagesPaths) {
-            let img = new Image();
-            img.onload = this.handleImageLoaded.bind(this);
-            img.src = p;
-        }
-    }
 
-    handleImageLoaded() {
-        this.countImagesLoaded++;
-    }
+
 
 }
 
