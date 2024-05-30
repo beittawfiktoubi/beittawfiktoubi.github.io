@@ -1,14 +1,5 @@
 :host {
-    scroll-snap-align: start;
-    height: inherit;
-    position: relative;
-
-    width: 100%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--dark-bg);
 }
 
 h1 {

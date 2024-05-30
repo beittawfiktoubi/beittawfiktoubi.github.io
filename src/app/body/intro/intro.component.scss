@@ -1,13 +1,5 @@
 :host {
-    height: inherit;
-    scroll-snap-align: start;
-    position: relative;
-    // TODO maybe remove all :host
-
-    display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
     gap: 60px;
 
     box-sizing: border-box;

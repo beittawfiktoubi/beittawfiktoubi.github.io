@@ -5,6 +5,7 @@ import { sleep } from './utils/misc';
 import { Loader } from './utils/loader';
 import { IntroComponent } from './body/intro/intro.component';
 import { GalleryComponent } from './body/gallery/gallery.component';
+import { ActivitiesComponent } from './body/activities/activities.component';
 
 @Component({
     selector: 'app-root',
@@ -42,6 +43,7 @@ export class AppComponent {
         this.container.clear();
         let ref = this.container.createComponent(IntroComponent);
         ref = this.container.createComponent(GalleryComponent);
+        ref = this.container.createComponent(ActivitiesComponent);
     }
 
 

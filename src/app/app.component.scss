@@ -7,21 +7,11 @@
 
 :host>* {
     height: inherit;
+    width: 100%;
     scroll-snap-align: start;
     position: relative;
     background-color: var(--dark-bg);
-
     display: flex;
     justify-content: center;
     align-items: center;
-    // TODO make sure this ok
 }
-
-// section {
-//     height: 100vh;
-//     height: 100svh;
-//     scroll-snap-align: start;
-//     position: relative;
-//     border: solid blue 5px;
-//     background: lightcoral;
-// }
