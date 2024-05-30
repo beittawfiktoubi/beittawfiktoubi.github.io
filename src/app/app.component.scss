@@ -5,6 +5,18 @@
     scroll-snap-type: y mandatory;
 }
 
+:host>* {
+    height: inherit;
+    scroll-snap-align: start;
+    position: relative;
+    background-color: var(--dark-bg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // TODO make sure this ok
+}
+
 // section {
 //     height: 100vh;
 //     height: 100svh;

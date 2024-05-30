@@ -39,6 +39,33 @@ body {
 }
 
 h1,
-h3 {
+h2,
+h3,
+p {
     color: var(--font-bright);
+}
+
+
+
+.scroll-snap-x {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+
+.snap-child {
+    scroll-snap-align: center;
+    flex-shrink: 0; // this is the key
+    height: 100%;
+    width: 100%;
+}
+
+.center-box {
+    gap: 21px;
+    height: 80%;
+    width: 80%;
+    padding: 20px;
+    border: solid 5px var(--border-gray);
 }

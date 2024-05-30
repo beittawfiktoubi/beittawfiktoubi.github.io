@@ -1,36 +1,15 @@
-:host {
-    height: inherit;
-    scroll-snap-align: start;
-    position: relative;
-    background-color: var(--dark-bg);
+// :host {
+//     height: inherit;
+//     scroll-snap-align: start;
+//     position: relative;
+//     background-color: var(--dark-bg);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#con {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    scroll-snap-type: x mandatory;
-    gap: 21px;
-    overflow-x: auto;
-
-    height: 80%;
-    width: 80%;
-    padding: 20px;
-    border: solid 5px var(--border-gray);
-}
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 img {
-    scroll-snap-align: center;
-    flex-shrink: 0; // this is the key
-
-    height: 100%;
-    width: 100%;
-
     object-fit: cover;
     object-position: center;
 }

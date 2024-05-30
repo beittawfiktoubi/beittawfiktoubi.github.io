@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReadMoreCardComponent } from './read-more-card/read-more-card.component';
 import { LogoComponent } from './logo/logo.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ActivityComponent } from './activity/activity.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { LoaderComponent } from './loader/loader.component';
         FooterComponent,
         LogoComponent,
         LoaderComponent,
+        ActivityComponent
     ],
     imports: [
         CommonModule
