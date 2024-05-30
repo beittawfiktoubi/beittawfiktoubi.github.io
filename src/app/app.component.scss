@@ -4,14 +4,3 @@
     height: inherit;
     scroll-snap-type: y mandatory;
 }
-
-:host>* {
-    height: inherit;
-    width: 100%;
-    scroll-snap-align: start;
-    position: relative;
-    background-color: var(--dark-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

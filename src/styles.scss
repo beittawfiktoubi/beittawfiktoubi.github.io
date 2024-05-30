@@ -47,6 +47,18 @@ p {
 
 
 
+app-root>* {
+    height: inherit;
+    width: 100%;
+    scroll-snap-align: start;
+    position: relative;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .scroll-snap-x {
     display: flex;
     flex-direction: row;

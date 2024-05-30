@@ -1,0 +1,33 @@
+:host {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#text-con {
+    background: var(--border-gray);
+}
+
+#con-t {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20%;
+}
+
+#con-p {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-con {
+    height: 100%;
+    width: 100%;
+    background: lightcoral;
+}
+
+h2 {
+    margin: 0;
+}

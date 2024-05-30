@@ -40,7 +40,6 @@ export class AppComponent {
 
     createAllComponents() {
         if (!this.container) return
-        this.container.clear();
         let ref = this.container.createComponent(IntroComponent);
         ref = this.container.createComponent(GalleryComponent);
         ref = this.container.createComponent(ActivitiesComponent);

@@ -12,7 +12,7 @@ type ActivityComponentProps = {
 })
 export class ActivitiesComponent {
     public readonly activities: ActivityComponentProps[] = [
-        { title: "hey", paragraph: "ho" },
+        { title: "Hosting Museum Guests", paragraph: "One a mouth we are hosting specail geusts of the Haifa musem to help rise mont from doners. the event will occanally invulem sevring wine and snakes" },
         { title: "hey2", paragraph: "ho2" }
     ];
 }
