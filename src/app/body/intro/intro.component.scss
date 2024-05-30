@@ -9,7 +9,9 @@
     align-items: center;
     gap: 60px;
 
-    background-image: url("../../../assets/background/0.png");
+    box-sizing: border-box;
+    border: solid 10px var(--border-gray);
+    // background-image: url("../../../assets/background/0.png");
 }
 
 #text-container {

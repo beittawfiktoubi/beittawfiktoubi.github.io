@@ -1,15 +1,3 @@
-<div id="gallery-cop-con">
-    <div id="slideshow">
-        <button class="button button-left" (click)="turnLeft()"></button>
-        <button class="button button-right" (click)="turnRight()"></button>
-        <div class="img-container image-border" *ngFor="let image of imageList">
-            <img id="img" [src]="image.src" [alt]="image.alt">
-        </div>
-    </div>
-    <section id="dots-sec">
-        <div id="all-dots-con">
-            <div class="dot-con" *ngFor="let image of imageList">
-            </div>
-        </div>
-    </section>
+<div id="con">
+    <img *ngFor="let image of imageList" [src]="image.src" [alt]="image.alt">
 </div>

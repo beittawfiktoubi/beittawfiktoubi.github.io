@@ -3,11 +3,19 @@ import { imagesPaths, vidPaths } from "../constants/strings";
 export class Loader {
     private countImagesLoaded: number = 0;
     private countVidLoaded: number = 0;
+    private video?: HTMLVideoElement;
 
 
     public get isDone(): boolean {
+
+        let isVidLoaded = false
+        if (this.video) {
+            isVidLoaded = this.video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA
+        }
+
+
         return (this.countImagesLoaded === imagesPaths.length &&
-            this.countVidLoaded === vidPaths.length)
+            (isVidLoaded || this.countVidLoaded === vidPaths.length))
     }
 
     public async loadDependencies() {
@@ -17,9 +25,17 @@ export class Loader {
 
     private async loadVids() {
         for (const p of vidPaths) {
-            let e = document.createElement('video');
-            e.onloadeddata = this.handleVidLoaded.bind(this);
-            e.src = p;
+            this.video = document.createElement('video');
+            const sourceElement = document.createElement('source');
+
+            sourceElement.src = p;
+            sourceElement.type = "video/mp4";
+            this.video.onloadeddata = this.handleVidLoaded.bind(this);
+
+            this.video.appendChild(sourceElement);
+            this.video.load();
+
+            // this.video.src = p;
         }
     }
 

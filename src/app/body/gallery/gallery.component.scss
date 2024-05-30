@@ -1,85 +1,36 @@
-#gallery-cop-con {
-    height: 100vh;
-}
-
-#text-con {
+:host {
+    height: inherit;
+    scroll-snap-align: start;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2vh;
-}
+    background-color: var(--dark-bg);
 
-#slideshow {
-    position: relative;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    overflow: hidden;
-}
-
-.button {
-    position: absolute;
-    z-index: 100;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 50vw;
-    height: 100%;
-}
-
-.button-right {
-    top: 0;
-    left: 0;
-}
-
-.button-left {
-    top: 0;
-    right: 0;
-}
-
-.img-container {
-    transition: all 700ms ease-in-out;
-    position: absolute;
-    height: 80%;
-    aspect-ratio: 5/3;
-    overflow: hidden;
-}
-
-#img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-#dots-sec {
-    width: 100vw;
-    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-#all-dots-con {
-    width: 25%;
-    height: 100%;
+#con {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    gap: 21px;
+    overflow-x: auto;
+
+    height: 80%;
+    width: 80%;
+    padding: 20px;
+    border: solid 5px var(--border-gray);
 }
 
-.dot-con {
-    background-color: var(--dark-color);
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    transition: all 500ms ease-in-out;
-}
+img {
+    scroll-snap-align: center;
+    flex-shrink: 0; // this is the key
 
-.big-dot-con {
-    width: 12px;
-    height: 12px;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
 }

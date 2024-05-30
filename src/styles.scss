@@ -6,9 +6,14 @@
 :root {
     // colors
     --dark-bg: rgb(25, 25, 25);
+    --natural-bg: rgb(40, 40, 40);
     --font-bright: white;
     --font-dark: var(--dark-bg);
     --bright: white;
+
+    // // border
+    --border-gray: rgb(100, 100, 100);
+    --border-purple: rgb(239, 182, 249);
 }
 
 .image-border {
@@ -35,5 +40,5 @@ body {
 
 h1,
 h3 {
-    color: var(--font-dark);
+    color: var(--font-bright);
 }

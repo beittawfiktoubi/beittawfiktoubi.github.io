@@ -4,6 +4,7 @@ import { imagesPaths } from './constants/strings';
 import { sleep } from './utils/misc';
 import { Loader } from './utils/loader';
 import { IntroComponent } from './body/intro/intro.component';
+import { GalleryComponent } from './body/gallery/gallery.component';
 
 @Component({
     selector: 'app-root',
@@ -19,7 +20,7 @@ export class AppComponent {
     loader: Loader = new Loader
     isLoading: boolean = true
 
-    @ViewChild('container', { read: ViewContainerRef, static: true }) container!: ViewContainerRef;
+    @ViewChild('container', { read: ViewContainerRef, static: true }) container?: ViewContainerRef;
 
     ngAfterViewInit() {
         this.loader.loadDependencies();
@@ -29,8 +30,6 @@ export class AppComponent {
     }
 
     checkDependencies = () => {
-        console.log('checkDependencies', this.loader.isDone)
-
         if (this.loader.isDone) {
             this.isLoading = false
             clearInterval(this.intervalId)
@@ -39,8 +38,10 @@ export class AppComponent {
     }
 
     createAllComponents() {
+        if (!this.container) return
         this.container.clear();
-        const ref = this.container.createComponent(IntroComponent);
+        let ref = this.container.createComponent(IntroComponent);
+        ref = this.container.createComponent(GalleryComponent);
     }
 
 
