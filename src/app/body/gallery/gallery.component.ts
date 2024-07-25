@@ -1,5 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, ElementRef, Inject, inject, Input, ViewChild } from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 class imageList {
     constructor(
         public src: string,
@@ -56,9 +57,26 @@ export class GalleryComponent {
         this.activeIndex = tmp / imageList.length * 2;
     }
 
-    openFullscreen(img: HTMLImageElement) {
-        if (img.requestFullscreen) {
-            img.requestFullscreen();
-        }
+    readonly dialog = inject(MatDialog);
+
+    openImageDialog(img: HTMLImageElement) {
+        const dialogRef = this.dialog.open(DialogContent, ({
+            data: { imagePath: img.src }
+        }));
+    }
+
+
+
+}
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+@Component({
+    selector: 'dialog-content',
+    template: '<h1>asd</h1><img [src]="data.imagePath"/>',
+    standalone: true,
+    imports: [MatDialogModule, MatButtonModule],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class DialogContent {
+    constructor(@Inject(MAT_DIALOG_DATA) public data: { imagePath: string }) {
     }
 }
