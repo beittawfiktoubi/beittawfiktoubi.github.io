@@ -7,6 +7,7 @@
 
     --text: hsl(246, 76%, 95%);
     --background: hsl(240, 60%, 1%);
+    --background-light: hsl(240, 15%, 26%);
     --primary: hsl(310, 27%, 74%);
     --secondary: hsl(11, 23%, 32%);
     --accent: hsl(48, 23%, 58%);
@@ -14,6 +15,11 @@
     // // border
     --border-gray: rgb(100, 100, 100);
     --border-purple: rgb(239, 182, 249);
+}
+
+// dialog image
+.cdk-overlay-container {
+    background: var(--background-light);
 }
 
 html,
@@ -55,7 +61,7 @@ app-root>* {
     display: flex;
     flex-direction: row;
     position: relative;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x block; //this is disabled for now
     overflow-x: auto;
 }
 

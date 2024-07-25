@@ -13,9 +13,9 @@ import { ReadMoreCardComponent } from './read-more-card/read-more-card.component
 import { LogoComponent } from './logo/logo.component';
 import { LoaderComponent } from './loader/loader.component';
 import { ActivityComponent } from './activity/activity.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryDotsComponent } from '../gallery-dots/gallery-dots.component';
-
+import { DialogImageComponent } from '../dialog-image/dialog-image.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -32,11 +32,12 @@ import { GalleryDotsComponent } from '../gallery-dots/gallery-dots.component';
         FooterComponent,
         LogoComponent,
         LoaderComponent,
+        DialogImageComponent,
         ActivityComponent
     ],
     imports: [
         FontAwesomeModule,
-        CommonModule
+        CommonModule,
     ],
     exports: [
         LoaderComponent,

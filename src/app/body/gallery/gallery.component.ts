@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Inject, inject, Input, ViewChild } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogImageComponent } from 'src/app/dialog-image/dialog-image.component';
+
 class imageList {
     constructor(
         public src: string,
@@ -60,23 +61,10 @@ export class GalleryComponent {
     readonly dialog = inject(MatDialog);
 
     openImageDialog(img: HTMLImageElement) {
-        const dialogRef = this.dialog.open(DialogContent, ({
+        const dialogRef = this.dialog.open(DialogImageComponent, {
             data: { imagePath: img.src }
-        }));
+        });
     }
 
-
-
 }
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-@Component({
-    selector: 'dialog-content',
-    template: '<h1>asd</h1><img [src]="data.imagePath"/>',
-    standalone: true,
-    imports: [MatDialogModule, MatButtonModule],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-})
-export class DialogContent {
-    constructor(@Inject(MAT_DIALOG_DATA) public data: { imagePath: string }) {
-    }
-}
+
