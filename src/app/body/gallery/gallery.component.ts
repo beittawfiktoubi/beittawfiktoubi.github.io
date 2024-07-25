@@ -55,4 +55,10 @@ export class GalleryComponent {
         let tmp = Math.round(element.scrollLeft / element.clientWidth);
         this.activeIndex = tmp / imageList.length * 2;
     }
+
+    openFullscreen(img: HTMLImageElement) {
+        if (img.requestFullscreen) {
+            img.requestFullscreen();
+        }
+    }
 }

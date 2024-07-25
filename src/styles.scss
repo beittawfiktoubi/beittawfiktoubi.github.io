@@ -67,6 +67,10 @@ app-root>* {
     scrollbar-width: none;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .snap-child {
     scroll-snap-align: center;
     flex-shrink: 0; // this is the key
