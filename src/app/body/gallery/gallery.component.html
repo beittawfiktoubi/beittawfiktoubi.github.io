@@ -1,4 +1,4 @@
-<div class="scroll-snap-x">
+<div (scroll)="onScroll()" #scrollContainer class=" m2 no-scrollbar scroll-snap-x">
     <img class="snap-child" *ngFor="let image of imageList" [src]="image.src" [alt]="image.alt">
 </div>
-<fa-icon [icon]="faCircle"></fa-icon>
+<app-gallery-dots [activeIndex]="activeIndex" [len]="imageList.length"></app-gallery-dots>

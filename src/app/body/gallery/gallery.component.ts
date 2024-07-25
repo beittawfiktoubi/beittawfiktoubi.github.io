@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 class imageList {
     constructor(
@@ -14,7 +13,6 @@ class imageList {
     styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-    faCircle = faCircle
     public readonly imageList: imageList[] = [
         {
             src: "/assets/images/gallery/1.jpg",
@@ -49,4 +47,12 @@ export class GalleryComponent {
             alt: "description",
         },
     ];
+
+    @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
+    activeIndex = 0;
+    onScroll() {
+        const element = this.scrollContainer.nativeElement;
+        let tmp = Math.round(element.scrollLeft / element.clientWidth);
+        this.activeIndex = tmp / imageList.length * 2;
+    }
 }

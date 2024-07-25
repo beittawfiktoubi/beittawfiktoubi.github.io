@@ -14,12 +14,14 @@ import { LogoComponent } from './logo/logo.component';
 import { LoaderComponent } from './loader/loader.component';
 import { ActivityComponent } from './activity/activity.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GalleryDotsComponent } from '../gallery-dots/gallery-dots.component';
 
 
 @NgModule({
     declarations: [
         ReadMoreCardComponent,
         NavbarComponent,
+        GalleryDotsComponent,
         GalleryComponent,
         ActivitiesComponent,
         CardComponent,

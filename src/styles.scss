@@ -45,6 +45,8 @@ app-root>* {
     align-items: center;
     flex-direction: column;
 
+    position: relative;
+
     height: 100vh;
     height: 100svh;
 }
@@ -55,6 +57,14 @@ app-root>* {
     position: relative;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
+}
+
+.no-scrollbar {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
 }
 
 .snap-child {
@@ -73,6 +83,6 @@ app-root>* {
     border: solid 5px var(--border-gray);
 }
 
-.text-container {
+.m2 {
     margin: 2rem;
 }
