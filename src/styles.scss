@@ -57,6 +57,14 @@ app-root>* {
     height: 100svh;
 }
 
+.fa-spin {
+    animation: fa-spin 6s infinite linear !important;
+}
+
+fa-icon {
+    color: var(--text);
+}
+
 .scroll-snap-x {
     display: flex;
     flex-direction: row;

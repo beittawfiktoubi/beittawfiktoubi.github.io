@@ -1,3 +1,2 @@
 <app-logo [animation]="true"></app-logo>
-<h1 #text i18n>Loading...</h1>
-<div id="scroll-indicator" *ngIf="!isLoading"></div>
+<fa-icon (click)="scrollDown()" [ngClass]="{'pointer': !isLoading}" [icon]="icon" [spin]="spin" size="3x"></fa-icon>

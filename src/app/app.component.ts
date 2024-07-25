@@ -44,10 +44,5 @@ export class AppComponent {
         ref = this.container.createComponent(GalleryComponent);
         // ref = this.container.createComponent(ActivitiesComponent);
     }
-
-
-
-
-
 }
 

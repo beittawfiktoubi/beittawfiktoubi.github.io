@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, SimpleChanges, ViewChild } from '@angular/core';
+import { faAnglesDown, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-loader',
@@ -8,16 +9,24 @@ import { Component, ElementRef, Input, SimpleChanges, ViewChild } from '@angular
 })
 export class LoaderComponent {
   @Input() isLoading!: boolean;
-  @ViewChild('text') text?: ElementRef<HTMLElement>
   logoSize: string = '280px'
+  icon = faSpinner
+  spin = true
+
 
   ngOnChanges(_prevChange: SimpleChanges) {
     if (!this.isLoading) {
-      if (this.text) {
-        this.text.nativeElement.classList.toggle("hide")
-      }
+      this.spin = false
+      this.icon = faAnglesDown
     }
+  }
 
+
+  scrollDown(): void {
+    const introElement = document.querySelector('app-intro');
+    if (introElement) {
+      introElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 }

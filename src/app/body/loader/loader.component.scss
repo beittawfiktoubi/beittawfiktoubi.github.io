@@ -1,23 +1,5 @@
-:host {}
-
-h1 {
-    transition: color 0.5s;
-}
-
-h1.hide {
-    color: transparent;
-}
-
 app-logo {
-    margin-top: 100px;
+    margin: 5rem;
     height: 280px;
     aspect-ratio: 1/1;
-}
-
-#scroll-indicator {
-    position: absolute;
-    bottom: 20px;
-    width: 30px;
-    aspect-ratio: 1;
-    background-color: pink;
 }
