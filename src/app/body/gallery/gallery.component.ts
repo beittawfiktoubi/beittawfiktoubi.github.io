@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 class imageList {
     constructor(
@@ -13,6 +14,7 @@ class imageList {
     styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
+    faCircle = faCircle
     public readonly imageList: imageList[] = [
         {
             src: "/assets/images/gallery/1.jpg",

@@ -4,35 +4,29 @@
 
 
 :root {
-    // colors
-    --dark-bg: rgb(25, 25, 25);
-    --natural-bg: rgb(40, 40, 40);
-    --font-bright: white;
-    --font-dark: var(--dark-bg);
-    --bright: white;
+
+    --text: hsl(246, 76%, 95%);
+    --background: hsl(240, 60%, 1%);
+    --primary: hsl(310, 27%, 74%);
+    --secondary: hsl(11, 23%, 32%);
+    --accent: hsl(48, 23%, 58%);
 
     // // border
     --border-gray: rgb(100, 100, 100);
     --border-purple: rgb(239, 182, 249);
 }
 
-.image-border {
-    border-radius: 20px;
-    border: 2px solid black;
-}
-
-
 html,
 body {
-    height: 100vh;
-    height: 100svh;
-    overflow: hidden;
+    // height: 100vh;
+    // height: 100svh;
+    // overflow: hidden;
 }
 
 body {
     list-style-type: none; // ul
     font-family: 'Cormorant+Garamond', 'Heebo', 'IBM+Plex+Sans+Arabic', sans-serif;
-    background: var(--dark-bg);
+    background: var(--background);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -42,22 +36,18 @@ h1,
 h2,
 h3,
 p {
-    color: var(--font-bright);
+    color: var(--text);
 }
 
-
-
 app-root>* {
-    height: inherit;
-    width: 100%;
-    scroll-snap-align: start;
-    position: relative;
-    background-color: var(--dark-bg);
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    flex-direction: column;
 
+    height: 100vh;
+    height: 100svh;
+}
 
 .scroll-snap-x {
     display: flex;
@@ -74,10 +64,15 @@ app-root>* {
     width: 100%;
 }
 
+// TODO maybe remove
 .center-box {
     gap: 21px;
     height: 80%;
     width: 80%;
     padding: 20px;
     border: solid 5px var(--border-gray);
+}
+
+.text-container {
+    margin: 2rem;
 }

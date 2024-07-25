@@ -13,6 +13,7 @@ import { ReadMoreCardComponent } from './read-more-card/read-more-card.component
 import { LogoComponent } from './logo/logo.component';
 import { LoaderComponent } from './loader/loader.component';
 import { ActivityComponent } from './activity/activity.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ActivityComponent } from './activity/activity.component';
         ActivityComponent
     ],
     imports: [
+        FontAwesomeModule,
         CommonModule
     ],
     exports: [
