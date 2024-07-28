@@ -1,7 +1,4 @@
 import { Component, ViewChild, ViewContainerRef } from '@angular/core';
-import { LoaderComponent } from './body/loader/loader.component';
-import { imagesPaths } from './constants/strings';
-import { sleep } from './utils/misc';
 import { Loader } from './utils/loader';
 import { IntroComponent } from './body/intro/intro.component';
 import { GalleryComponent } from './body/gallery/gallery.component';
