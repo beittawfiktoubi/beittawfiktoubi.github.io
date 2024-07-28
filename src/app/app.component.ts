@@ -3,6 +3,7 @@ import { Loader } from './utils/loader';
 import { IntroComponent } from './body/intro/intro.component';
 import { GalleryComponent } from './body/gallery/gallery.component';
 import { ActivitiesComponent } from './body/activities/activities.component';
+import { FooterComponent } from './body/footer/footer.component';
 
 @Component({
     selector: 'app-root',
@@ -40,6 +41,7 @@ export class AppComponent {
         let ref = this.container.createComponent(IntroComponent);
         ref = this.container.createComponent(GalleryComponent);
         ref = this.container.createComponent(ActivitiesComponent);
+        ref = this.container.createComponent(FooterComponent);
     }
 }
 

@@ -1,22 +1,35 @@
 :host {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.outer-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: black;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-.fot-grid-con {
-    width: 70%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-bottom: 10vh;
-}
+.inner-box {
+    box-shadow: 0 0 20px -8px var(--primary);
 
-.fot-item-con {
-    padding-left: 20px;
-}
 
-.fot-item-con p,
-.fot-item-con h3 {
-    color: white;
+    box-sizing: border-box;
+
+    border: solid 1px var(--primary);
+    border-radius: 20px;
+
+    padding: 1rem;
+
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
