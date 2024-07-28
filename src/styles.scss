@@ -7,7 +7,7 @@
 
     --text: hsl(246, 76%, 95%);
     --background: hsl(240, 60%, 1%);
-    --background-light: hsl(240, 15%, 26%);
+    --background-light: #1E1E1E;
     --primary: hsl(310, 27%, 74%);
     --secondary: hsl(11, 23%, 32%);
     --accent: hsl(48, 23%, 58%);
@@ -23,11 +23,7 @@
 }
 
 html,
-body {
-    // height: 100vh;
-    // height: 100svh;
-    // overflow: hidden;
-}
+body {}
 
 body {
     list-style-type: none; // ul

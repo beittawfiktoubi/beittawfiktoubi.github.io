@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ActivityComponent {
   @Input() title: string = 'missing';
   @Input() paragraph: string = 'missing';
-
+  @Input() img: string = '';
 }

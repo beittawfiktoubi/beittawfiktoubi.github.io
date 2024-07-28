@@ -42,7 +42,7 @@ export class AppComponent {
         if (!this.container) return
         let ref = this.container.createComponent(IntroComponent);
         ref = this.container.createComponent(GalleryComponent);
-        // ref = this.container.createComponent(ActivitiesComponent);
+        ref = this.container.createComponent(ActivitiesComponent);
     }
 }
 
