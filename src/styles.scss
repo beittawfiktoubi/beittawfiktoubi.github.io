@@ -23,8 +23,6 @@
 }
 
 html,
-body {}
-
 body {
     list-style-type: none; // ul
     font-family: 'Cormorant+Garamond', 'Heebo', 'IBM+Plex+Sans+Arabic', sans-serif;
@@ -59,6 +57,27 @@ app-root>* {
 
 fa-icon {
     color: var(--text);
+}
+
+// Scroll
+.scroll {
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    height: auto;
+    width: 100%;
+}
+
+.scroll-child {
+    width: 100%;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .scroll-snap-x {
@@ -99,15 +118,4 @@ fa-icon {
 
 .m2 {
     margin: 2rem;
-}
-
-// TODO AM auto added
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

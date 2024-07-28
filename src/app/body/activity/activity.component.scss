@@ -1,12 +1,25 @@
-:host {
+.full-width {
     height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    background: var(--background-light);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-div {
+.small-width {
+    width: 80%;
+    height: 100%;
+
+    border-radius: 20px;
+    background: var(--background-light);
+
+    overflow: hidden;
+}
+
+.text-con {
     padding: 0 .8rem;
+
 }
 
 img {

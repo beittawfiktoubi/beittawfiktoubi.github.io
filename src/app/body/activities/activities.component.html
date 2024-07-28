@@ -1,5 +1,5 @@
-<div #scrollContainer (scroll)="onScroll()" class="no-scrollbar scroll-snap-x">
-    <app-activity class="snap-child" *ngFor="let a of activities" title="{{a.title}}" paragraph="{{a.paragraph}}"
+<div #scrollContainer (scroll)="onScroll()" class="no-scrollbar scroll">
+    <app-activity class="scroll-child" *ngFor="let a of activities" title="{{a.title}}" paragraph="{{a.paragraph}}"
         img="{{a.img}}">
     </app-activity>
 </div>

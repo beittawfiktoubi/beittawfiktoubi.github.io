@@ -32,9 +32,9 @@ export class ActivitiesComponent {
 
     @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
     activeIndex = 0;
-    onScroll() {
+    onScroll() { // TODO this might have issues
         const element = this.scrollContainer.nativeElement;
         let tmp = Math.round(element.scrollLeft / element.clientWidth);
-        this.activeIndex = tmp / this.activities.length * 2;
+        this.activeIndex = tmp
     }
 }
