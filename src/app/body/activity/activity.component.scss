@@ -8,6 +8,9 @@
 }
 
 .small-width {
+    border: solid 2px var(--primary);
+    box-sizing: border-box;
+
     width: 80%;
     height: 100%;
 
@@ -18,8 +21,8 @@
 }
 
 .text-con {
+    height: 50%;
     padding: 0 .8rem;
-
 }
 
 img {

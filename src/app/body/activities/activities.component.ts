@@ -15,7 +15,7 @@ export class ActivitiesComponent {
     public readonly activities: ActivityComponentProps[] = [
         {
             title: "Hosting Museum Guests",
-            paragraph: "One a mouth we are hosting special guests of the Haifa muser to help rise mont from diners. the event will oncanplay inhume serving wine and snakes",
+            paragraph: "One a mouth we are hosting special guests of the Haifa muser to help rise mont from diners. the event will oncanplay inhume serving wine",
             img: "assets/images/activities/1.jpg"
         },
         {
