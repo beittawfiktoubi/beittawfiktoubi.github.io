@@ -17,11 +17,17 @@
     // // border
     --border-gray: rgb(100, 100, 100);
     --border-purple: rgb(239, 182, 249);
+
+    --mat-menu-item-label-text-size: 2.4rem;
 }
 
 // dialog image
 .cdk-overlay-container {
     background: var(--backdrop-color);
+}
+
+.mat-mdc-menu-panel {
+    min-width: 0 !important;
 }
 
 html,

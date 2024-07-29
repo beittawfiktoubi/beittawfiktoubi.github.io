@@ -1,7 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
-import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-language-switch',
@@ -23,7 +22,7 @@ export class LanguageSwitchComponent {
   }
 
   readonly CHECK_INTERVAL = 2000;
-  intervalId?: NodeJS.Timeout;
+  intervalId?: any;
 
   onMenuClosed() {
     this.intervalId = setInterval(() => {
