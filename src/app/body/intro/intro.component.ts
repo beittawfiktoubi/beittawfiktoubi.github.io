@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-intro',
@@ -6,5 +7,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
     styleUrl: './intro.component.scss',
 })
 export class IntroComponent {
-
+    constructor(translate: TranslateService) { }
 }

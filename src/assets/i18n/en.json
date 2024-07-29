@@ -1,0 +1,21 @@
+{
+    "WEBSITE_TITLE": "Beit Tubi",
+    "intro": {
+        "h1": "Beit Tubi",
+        "h3": "In this section You will descried in a few words what is this place"
+    },
+    "activities": {
+        "0": {
+            "title": "Hosting Museum Guests",
+            "paragraph": "One a mouth we are hosting special guests of the Haifa muser to help rise mont from diners. the event will on can play inhume serving wine"
+        },
+        "1": {
+            "title": "Lecture On Hafia's",
+            "paragraph": "Gathering a grope of travelers that are interested in understanding the history of the city."
+        },
+        "2": {
+            "title": "Art Gallery",
+            "paragraph": "We are hosting a special art gallery event for the local artists to showcase their work."
+        }
+    }
+}

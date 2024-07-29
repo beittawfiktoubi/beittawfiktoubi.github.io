@@ -12,7 +12,6 @@ import { FooterComponent } from './body/footer/footer.component';
 })
 export class AppComponent {
     readonly CHECK_INTERVAL = 1000;
-    title = 'Biet Tubi';
 
     intervalId: any;
 

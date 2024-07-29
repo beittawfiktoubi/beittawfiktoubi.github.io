@@ -13,6 +13,7 @@ import { ActivityComponent } from './activity/activity.component';
 import { GalleryDotsComponent } from '../gallery-dots/gallery-dots.component';
 import { DialogImageComponent } from '../dialog-image/dialog-image.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         ActivityComponent
     ],
     imports: [
+        TranslateModule,
         FontAwesomeModule,
         CommonModule,
     ],

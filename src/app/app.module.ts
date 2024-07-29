@@ -7,6 +7,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // TODO AM auto added
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+
 @NgModule({
     declarations: [
         AppComponent
@@ -15,6 +27,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
         BrowserModule,
         BodyModule,
         FontAwesomeModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'en',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
     ],
     providers: [
         provideAnimationsAsync()
