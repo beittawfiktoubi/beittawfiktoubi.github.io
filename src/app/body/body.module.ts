@@ -14,6 +14,10 @@ import { GalleryDotsComponent } from '../gallery-dots/gallery-dots.component';
 import { DialogImageComponent } from '../dialog-image/dialog-image.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitchComponent } from '../language-switch/language-switch.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
     declarations: [
@@ -28,14 +32,19 @@ import { TranslateModule } from '@ngx-translate/core';
         LogoComponent,
         LoaderComponent,
         DialogImageComponent,
-        ActivityComponent
+        ActivityComponent,
+        LanguageSwitchComponent
     ],
     imports: [
+        MatIconModule,
+        MatMenuModule,
+        MatButtonModule,
         TranslateModule,
         FontAwesomeModule,
         CommonModule,
     ],
     exports: [
+        LanguageSwitchComponent,
         LoaderComponent,
         HeaderComponent,
         IntroComponent,

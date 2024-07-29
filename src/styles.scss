@@ -12,6 +12,8 @@
     --secondary: hsl(11, 23%, 32%);
     --accent: hsl(48, 23%, 58%);
 
+    --backdrop-color: var(--background-light);
+
     // // border
     --border-gray: rgb(100, 100, 100);
     --border-purple: rgb(239, 182, 249);
@@ -19,7 +21,7 @@
 
 // dialog image
 .cdk-overlay-container {
-    background: var(--background-light);
+    background: var(--backdrop-color);
 }
 
 html,
