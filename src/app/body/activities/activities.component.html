@@ -1,7 +1,7 @@
-<div #scrollContainer (scroll)="onScroll()" class="no-scrollbar scroll">
+<div #scrollContainer (scroll)="onScroll(dots)" class="no-scrollbar scroll">
     <app-activity class="scroll-child" *ngFor="let a of activities"
         title="{{ 'activities.' + a.id + '.title' | translate}}"
         paragraph="{{ 'activities.' + a.id + '.paragraph' | translate}}" img="{{a.img}}">
     </app-activity>
 </div>
-<app-gallery-dots [activeIndex]="activeIndex" [len]="activities.length"></app-gallery-dots>
+<app-gallery-dots #dots [activeIndex]="activeIndex" [len]="activities.length"></app-gallery-dots>

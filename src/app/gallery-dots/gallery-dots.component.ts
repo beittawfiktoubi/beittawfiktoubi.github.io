@@ -24,8 +24,11 @@ export class GalleryDotsComponent {
     this.cdRef.detectChanges();
   }
 
-  ngOnChanges(changes: SimpleChanges) {
+  public scrollHandler = (scrollContainer: HTMLElement): number => {
+    return Math.round(Math.abs(scrollContainer.scrollLeft / scrollContainer.clientWidth));
+  }
 
+  ngOnChanges(changes: SimpleChanges) {
     if (changes['activeIndex']) {
       const oldValue = changes['activeIndex'].previousValue;
       const newValue = changes['activeIndex'].currentValue;

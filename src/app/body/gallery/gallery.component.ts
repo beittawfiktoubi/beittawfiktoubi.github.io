@@ -1,6 +1,7 @@
 import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogImageComponent } from 'src/app/dialog-image/dialog-image.component';
+import { GalleryDotsComponent } from 'src/app/gallery-dots/gallery-dots.component';
 
 class imageList {
     constructor(
@@ -52,10 +53,9 @@ export class GalleryComponent {
 
     @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
     activeIndex = 0;
-    onScroll() {
+    onScroll(dots: GalleryDotsComponent) {
         const element = this.scrollContainer.nativeElement;
-        let tmp = Math.round(element.scrollLeft / element.clientWidth);
-        this.activeIndex = tmp / imageList.length * 2;
+        this.activeIndex = dots.scrollHandler(element);
     }
 
     readonly dialog = inject(MatDialog);
@@ -65,6 +65,5 @@ export class GalleryComponent {
             data: { imagePath: img.src }
         });
     }
-
 }
 

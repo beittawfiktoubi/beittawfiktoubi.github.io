@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { GalleryDotsComponent } from 'src/app/gallery-dots/gallery-dots.component';
 
 type ActivityComponentProps = {
     id: string;
@@ -33,9 +34,8 @@ export class ActivitiesComponent {
 
     @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
     activeIndex = 0;
-    onScroll() { // TODO this might have issues
+    onScroll(dots: GalleryDotsComponent) {
         const element = this.scrollContainer.nativeElement;
-        let tmp = Math.round(element.scrollLeft / element.clientWidth);
-        this.activeIndex = tmp
+        this.activeIndex = dots.scrollHandler(element);
     }
 }
