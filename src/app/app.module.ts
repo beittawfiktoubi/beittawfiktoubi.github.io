@@ -11,6 +11,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguageService } from './services/language.service';
 
 
 // AoT requires an exported function for factories
@@ -29,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         FontAwesomeModule,
         HttpClientModule,
         TranslateModule.forRoot({
-            defaultLanguage: 'en',
+            defaultLanguage: 'he',
             loader: {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
@@ -38,6 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         }),
     ],
     providers: [
+        LanguageService,
         provideAnimationsAsync()
     ],
     bootstrap: [AppComponent]

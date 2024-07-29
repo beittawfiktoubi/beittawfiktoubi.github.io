@@ -4,6 +4,7 @@ import { IntroComponent } from './body/intro/intro.component';
 import { GalleryComponent } from './body/gallery/gallery.component';
 import { ActivitiesComponent } from './body/activities/activities.component';
 import { FooterComponent } from './body/footer/footer.component';
+import { LanguageService } from './services/language.service';
 
 @Component({
     selector: 'app-root',
@@ -11,6 +12,10 @@ import { FooterComponent } from './body/footer/footer.component';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    constructor(private languageService: LanguageService) {
+        this.languageService.updateDirection("he")
+    }
+
     readonly CHECK_INTERVAL = 1000;
 
     intervalId: any;
