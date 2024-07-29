@@ -1,5 +1,5 @@
-import { Component, ElementRef, Input, SimpleChanges, ViewChild } from '@angular/core';
-import { faAnglesDown, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { faCheck, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-loader',
@@ -17,10 +17,11 @@ export class LoaderComponent {
   ngOnChanges(_prevChange: SimpleChanges) {
     if (!this.isLoading) {
       this.spin = false
-      this.icon = faAnglesDown
+      this.icon = faCheck
+      const e = document.querySelector("app-loader")
+      e?.classList.add("up")
     }
   }
-
 
   scrollDown(): void {
     const introElement = document.querySelector('app-intro');

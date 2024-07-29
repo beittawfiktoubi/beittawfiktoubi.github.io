@@ -1,6 +1,18 @@
 :host {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--background);
     height: 100vh;
     height: 100svh;
+    width: 100%;
+
+    transition: transform 3s 1s;
+}
+
+:host.up {
+    transform: translateY(-200%);
 }
 
 app-logo {
