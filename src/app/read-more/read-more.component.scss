@@ -1,9 +1,12 @@
 :host {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 div {
     display: block;
+    width: 100%;
 }
 
 .dir-right {
@@ -14,14 +17,51 @@ div {
     direction: ltr;
 }
 
+.left-card,
+.right-card {
+    border: solid 1px var(--primary);
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+
 .right-card {
     border-radius: var(--border-radius) 0 0 var(--border-radius);
-    border: solid 1px var(--text);
     border-right: 0;
 }
 
 .left-card {
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    border: solid 1px var(--text);
     border-left: 0;
+}
+
+.left-card.visible {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+.right-card.visible {
+    animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
