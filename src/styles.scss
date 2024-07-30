@@ -13,11 +13,18 @@
 
     --backdrop-color: var(--background-light);
 
-    // // border
-    --border-gray: rgb(100, 100, 100);
-    --border-purple: rgb(239, 182, 249);
+    // border
+    --border-radius: 20px;
 
     --mat-menu-item-label-text-size: 2.4rem;
+}
+
+.main-direction {
+    direction: var(--main-direction);
+}
+
+.opposite-direction {
+    direction: var(--opposite-direction);
 }
 
 .right {

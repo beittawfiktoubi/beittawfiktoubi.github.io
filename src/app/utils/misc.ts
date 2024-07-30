@@ -11,3 +11,9 @@ export function showBackdrop() {
 export function hideBackdrop() {
     document.documentElement.style.setProperty('--backdrop-color', 'transparent');
 }
+
+export function setDirection(v: "rtl" | "ltr") {
+    const opp = (v === "rtl") ? "ltr" : "rtl"
+    document.documentElement.style.setProperty('--main-direction', v);
+    document.documentElement.style.setProperty('--opposite-direction', opp);
+}

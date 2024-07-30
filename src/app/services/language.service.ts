@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Renderer2, RendererFactory2 } from '@angular/core';
+import { setDirection } from '../utils/misc';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,9 @@ export class LanguageService {
   public updateDirection(lang: string) {
     const direction = (lang === 'he') || (lang === 'ar') ? 'rtl' : 'ltr';
     this.renderer.setAttribute(document.documentElement, 'dir', direction);
+
+    setDirection(direction)
+
     const langContainer = document.getElementById("lang-con")
     if (langContainer) {
       let addClass = 'right';

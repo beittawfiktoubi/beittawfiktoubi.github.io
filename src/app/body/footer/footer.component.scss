@@ -22,7 +22,7 @@
     box-sizing: border-box;
 
     border: solid 1px var(--primary);
-    border-radius: 20px;
+    border-radius: var(--border-radius);
 
     padding: 1rem;
 
