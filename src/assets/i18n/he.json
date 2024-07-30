@@ -17,6 +17,18 @@
             "paragraph": "אנו מארחים אירוע גלריית אמנות מיוחד לאמנים המקומיים להציג את עבודותיהם."
         }
     },
+    "links": {
+        "0": {
+            "title": "קרא עוד",
+            "linkAddress": "https://shimur.org/signs/בית-תאופיק-טובי/",
+            "linkText": "shimur.com"
+        },
+        "1": {
+            "title": "שימור חיפה",
+            "linkAddress": "https://he.wikipedia.org/wiki/תופיק_טובי",
+            "linkText": "wikipedia.com"
+        }
+    },
     "footer": {
         "address": {
             "h3": "כתובת",

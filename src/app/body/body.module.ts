@@ -18,6 +18,8 @@ import { LanguageSwitchComponent } from '../language-switch/language-switch.comp
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ReadMoreComponent } from '../read-more/read-more.component';
+import { ReadMoreCardComponent } from '../read-more-card/read-more-card.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,9 @@ import { MatIconModule } from '@angular/material/icon';
         LoaderComponent,
         DialogImageComponent,
         ActivityComponent,
-        LanguageSwitchComponent
+        LanguageSwitchComponent,
+        ReadMoreComponent,
+        ReadMoreCardComponent
     ],
     imports: [
         MatIconModule,

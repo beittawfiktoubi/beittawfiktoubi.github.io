@@ -50,6 +50,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
     color: var(--text);
 }
@@ -92,14 +93,6 @@ fa-icon {
     align-items: center;
 }
 
-.scroll-snap-x {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    scroll-snap-type: x block; //this is disabled for now
-    overflow-x: auto;
-}
-
 .no-scrollbar {
     &::-webkit-scrollbar {
         display: none;
@@ -110,22 +103,6 @@ fa-icon {
 
 .pointer {
     cursor: pointer;
-}
-
-.snap-child {
-    scroll-snap-align: center;
-    flex-shrink: 0; // this is the key
-    height: 100%;
-    width: 100%;
-}
-
-// TODO maybe remove
-.center-box {
-    gap: 21px;
-    height: 80%;
-    width: 80%;
-    padding: 20px;
-    border: solid 5px var(--border-gray);
 }
 
 .ps1 {

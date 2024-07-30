@@ -17,6 +17,18 @@
             "paragraph": "We are hosting a special art gallery event for the local artists to showcase their work."
         }
     },
+    "links": {
+        "0": {
+            "title": "Read More",
+            "linkAddress": "https://shimur.org/signs/בית-תאופיק-טובי/",
+            "linkText": "shimur.com"
+        },
+        "1": {
+            "title": "Haifa Heritage",
+            "linkAddress": "https://he.wikipedia.org/wiki/תופיק_טובי",
+            "linkText": "wikipedia.com"
+        }
+    },
     "footer": {
         "address": {
             "h3": "Address",
