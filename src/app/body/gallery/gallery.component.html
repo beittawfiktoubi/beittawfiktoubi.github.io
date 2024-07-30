@@ -1,5 +1,5 @@
-<div (scroll)="onScroll(dots)" #scrollContainer class="no-scrollbar scroll-snap-x">
-    <img *ngFor="let image of imageList" #imageRef (click)="openImageDialog(imageRef)" class="pointer snap-child"
+<div (scroll)="onScroll(dots)" #scrollContainer class="ps1 no-scrollbar scroll">
+    <img *ngFor="let image of imageList" #imageRef (click)="openImageDialog(imageRef)" class="pointer scroll-child"
         [src]="image.src" [alt]="image.alt">
 </div>
 <app-gallery-dots #dots [activeIndex]="activeIndex" [len]="imageList.length"></app-gallery-dots>

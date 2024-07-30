@@ -1,6 +1,6 @@
 :host {
-    height: 80vh;
-    height: 80svh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 img {
@@ -9,6 +9,10 @@ img {
 }
 
 div {
-    padding: 1rem;
+    box-sizing: border-box;
+    height: 60vh;
+    width: 100%;
+
     gap: 1rem;
+    margin-bottom: 1rem;
 }
