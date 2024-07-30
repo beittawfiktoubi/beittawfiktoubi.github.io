@@ -1,1 +1,13 @@
-<app-read-more-card *ngFor="let e of links" [link]="e"></app-read-more-card>
+<div *ngFor="let e of links; let i = index" [ngClass]="
+{
+    'dir-right': (i % 2) === 0,
+    'dir-left': (i % 2) !== 0,
+}
+">
+    <app-read-more-card [link]="e" [ngClass]="
+{
+    'right-card': (i % 2) === 0,
+    'left-card': (i % 2) !== 0,
+}
+"></app-read-more-card>
+</div>

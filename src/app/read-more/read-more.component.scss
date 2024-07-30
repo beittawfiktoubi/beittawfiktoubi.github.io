@@ -1,0 +1,27 @@
+:host {
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+.dir-right {
+    direction: rtl;
+}
+
+.dir-left {
+    direction: ltr;
+}
+
+.right-card {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border: solid 1px var(--text);
+    border-right: 0;
+}
+
+.left-card {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border: solid 1px var(--text);
+    border-left: 0;
+}
