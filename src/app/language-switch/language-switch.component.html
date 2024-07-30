@@ -1,7 +1,7 @@
 <button (click)="handlerOpenMenu()" mat-button [matMenuTriggerFor]="menu">
     <fa-icon [icon]="icon" size="3x"></fa-icon>
 </button>
-<mat-menu #menu="matMenu" yPosition="below" xPosition="before" [overlapTrigger]="false" (closed)="onMenuClosed()">
+<mat-menu #menu="matMenu" yPosition="below" xPosition="before" [overlapTrigger]="false">
     <button (click)="selectLang('en')" mat-menu-item>🇺🇸</button>
     <button (click)="selectLang('he')" mat-menu-item>🇮🇱</button>
 </mat-menu>

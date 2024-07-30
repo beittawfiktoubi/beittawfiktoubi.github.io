@@ -20,6 +20,14 @@
     --mat-menu-item-label-text-size: 2.4rem;
 }
 
+.right {
+    direction: rtl;
+}
+
+.left {
+    direction: ltr;
+}
+
 // dialog image
 .cdk-overlay-container {
     background: var(--backdrop-color);

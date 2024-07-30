@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { hideBackdrop } from '../utils/misc';
 
 @Component({
   selector: 'app-language-switch',
@@ -18,17 +19,6 @@ export class LanguageSwitchComponent {
   }
 
   handlerOpenMenu(): void {
-    document.documentElement.style.setProperty('--backdrop-color', 'transparent');
-  }
-
-  readonly CHECK_INTERVAL = 2000;
-  intervalId?: any;
-
-  onMenuClosed() {
-    this.intervalId = setInterval(() => {
-      const v = document.documentElement.style.getPropertyValue('--background-light');
-      document.documentElement.style.setProperty('--backdrop-color', v);
-      clearInterval(this.intervalId)
-    }, this.CHECK_INTERVAL);
+    hideBackdrop()
   }
 }

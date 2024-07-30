@@ -2,6 +2,7 @@ import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogImageComponent } from 'src/app/dialog-image/dialog-image.component';
 import { GalleryDotsComponent } from 'src/app/gallery-dots/gallery-dots.component';
+import { showBackdrop } from 'src/app/utils/misc';
 
 class imageList {
     constructor(
@@ -61,6 +62,7 @@ export class GalleryComponent {
     readonly dialog = inject(MatDialog);
 
     openImageDialog(img: HTMLImageElement) {
+        showBackdrop()
         const dialogRef = this.dialog.open(DialogImageComponent, {
             data: { imagePath: img.src }
         });

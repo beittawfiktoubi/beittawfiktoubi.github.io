@@ -19,5 +19,18 @@ export class LanguageService {
   public updateDirection(lang: string) {
     const direction = (lang === 'he') || (lang === 'ar') ? 'rtl' : 'ltr';
     this.renderer.setAttribute(document.documentElement, 'dir', direction);
+    const langContainer = document.getElementById("lang-con")
+    if (langContainer) {
+      let addClass = 'right';
+      let removeClass = 'left';
+
+      if (direction === 'rtl') {
+        addClass = 'left';
+        removeClass = 'right';
+      }
+
+      langContainer.classList.add(addClass)
+      langContainer.classList.remove(removeClass)
+    }
   }
 }
