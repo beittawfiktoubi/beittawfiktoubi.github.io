@@ -6,3 +6,40 @@ div {
     gap: 1rem;
     margin-bottom: 1rem;
 }
+
+// Desktop
+@media (min-width:1281px) {
+    app-gallery-dots {
+        display: none;
+    }
+
+    app-activity {
+        box-sizing: border-box;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+
+        height: auto;
+    }
+
+    .left-card,
+    .right-card {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .right-card {
+        direction: rtl;
+    }
+
+    .left-card {
+        direction: ltr;
+    }
+
+}

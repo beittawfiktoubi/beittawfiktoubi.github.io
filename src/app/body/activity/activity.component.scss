@@ -33,6 +33,18 @@ img {
     object-fit: cover;
 }
 
+// Desktop
+@media (min-width:1281px) {
+    .full-width {
+        width: 80%;
+    }
+
+    .text-con {
+        direction: rtl;
+    }
+
+}
+
 @media (orientation: landscape) {
     .small-width {
         display: flex;

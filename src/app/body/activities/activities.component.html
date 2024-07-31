@@ -1,7 +1,12 @@
 <div #scrollContainer (scroll)="onScroll(dots)" class="ps1 no-scrollbar scroll">
-    <app-activity class="scroll-child" *ngFor="let a of activities"
+    <app-activity class="scroll-child" *ngFor="let a of activities; let i = index "
         title="{{ 'activities.' + a.id + '.title' | translate}}"
-        paragraph="{{ 'activities.' + a.id + '.paragraph' | translate}}" img="{{a.img}}">
+        paragraph="{{ 'activities.' + a.id + '.paragraph' | translate}}" img="{{a.img}}" [ngClass]="
+        {
+            'right-card': (i % 2) === 0,
+            'left-card': (i % 2) !== 0,
+        }
+        ">
     </app-activity>
 </div>
 <app-gallery-dots #dots [activeIndex]="activeIndex" [len]="activities.length"></app-gallery-dots>
