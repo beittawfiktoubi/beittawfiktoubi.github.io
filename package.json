@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "trans": "ng extract-i18n --output-path src/locale",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "publish": " ng deploy --no-silent --repo=https://github.com/bytetobi/bytetobi.github.io --branch=main",
+    "stage": "ng deploy --no-silent --repo=https://github.com/arikhativa/arikhativa.github.io --branch=main",
+    "publish": "ng deploy --no-silent --repo=https://github.com/bytetobi/bytetobi.github.io --branch=main",
     "test": "ng test"
   },
   "private": true,

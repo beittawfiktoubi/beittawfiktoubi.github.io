@@ -1,12 +1,22 @@
 :host {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-video {
-    max-height: 90vh;
-    width: 100%;
-    border: none;
+
+// Desktop
+@media (min-width:1281px) {
+    iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+}
+
+// Mobile on the side
+@media (orientation: landscape) and (max-width: 1281px) {
+    iframe {
+        width: 90vw;
+        height: 90vh;
+    }
 }
