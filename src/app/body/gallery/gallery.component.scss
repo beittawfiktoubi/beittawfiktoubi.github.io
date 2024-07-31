@@ -16,16 +16,28 @@ div {
     margin-bottom: 1rem;
 }
 
-@media (orientation: landscape) {
-    div {
-        gap: 10rem;
-    }
-}
-
 // Desktop
 @media (min-width:1281px) {
     :host {
         padding: 0 var(--padding-sides-desktop);
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+        aspect-ratio: 1;
+        transition: scale .2s;
+    }
+
+    img:hover {
+        scale: 1.03;
+    }
+
+    app-gallery-dots {
+        display: none;
     }
 }
 
@@ -36,6 +48,7 @@ div {
     }
 
     div {
+        gap: 10rem;
         height: 80vh;
         width: 80%;
     }
