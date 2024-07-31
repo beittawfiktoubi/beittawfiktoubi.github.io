@@ -76,6 +76,13 @@ app-root>* {
     margin-bottom: 3rem;
 }
 
+// Desktop
+@media (min-width:1281px) {
+    app-root>* {
+        margin-bottom: 10rem;
+    }
+}
+
 .fa-spin {
     animation: fa-spin 6s infinite linear !important;
 }
