@@ -25,7 +25,12 @@ export class GalleryDotsComponent {
   }
 
   public scrollHandler = (scrollContainer: HTMLElement): number => {
-    return Math.round(Math.abs(scrollContainer.scrollLeft / scrollContainer.clientWidth));
+    const full = scrollContainer.scrollWidth - scrollContainer.clientWidth
+
+    const part = (Math.abs(scrollContainer.scrollLeft) / full)
+
+    const ret = part * (this.len - 1)
+    return Math.round(ret)
   }
 
   ngOnChanges(changes: SimpleChanges) {
