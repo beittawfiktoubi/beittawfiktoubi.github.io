@@ -33,9 +33,14 @@ img {
     object-fit: cover;
 }
 
-@media (orientation: landscape) and (max-width: 1281px) {
+@media (orientation: landscape) {
     .small-width {
         display: flex;
         width: 80%;
+    }
+
+    .text-con {
+        height: 100%;
+        width: 100%;
     }
 }

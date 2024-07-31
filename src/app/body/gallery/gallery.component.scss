@@ -16,6 +16,19 @@ div {
     margin-bottom: 1rem;
 }
 
+@media (orientation: landscape) {
+    div {
+        gap: 10rem;
+    }
+}
+
+// Desktop
+@media (min-width:1281px) {
+    :host {
+        padding: 0 var(--padding-sides-desktop);
+    }
+}
+
 // Mobile on the side
 @media (orientation: landscape) and (max-width: 1281px) {
     img {
@@ -25,7 +38,5 @@ div {
     div {
         height: 80vh;
         width: 80%;
-
-        gap: 10rem;
     }
 }
