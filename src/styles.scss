@@ -19,6 +19,7 @@
 
     // padding
     --p1: 1rem;
+    --p2: 2rem;
     --padding-sides-desktop: 10rem;
 }
 
@@ -64,6 +65,7 @@ h4,
 p {
     color: var(--text);
 }
+
 
 app-root>* {
     display: flex;

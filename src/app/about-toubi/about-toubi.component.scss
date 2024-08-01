@@ -1,0 +1,44 @@
+:host {
+    padding: 0 var(--p1);
+}
+
+#con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--p1);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    clip-path: inset(1% round 50%);
+    shape-outside: inset(1% round 50%);
+    object-fit: cover;
+    object-position: center;
+}
+
+
+// Desktop
+@media (min-width:1281px) {
+    :host {
+        padding: 0 var(--padding-sides-desktop);
+    }
+
+    #con {
+        display: flex;
+        gap: 10rem;
+    }
+
+    #text-con {
+        max-width: 600px;
+    }
+
+    img {
+        float: left;
+    }
+
+
+}

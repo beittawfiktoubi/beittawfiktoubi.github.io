@@ -20,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ReadMoreComponent } from '../read-more/read-more.component';
 import { ReadMoreCardComponent } from '../read-more-card/read-more-card.component';
+import { AboutToubiComponent } from '../about-toubi/about-toubi.component';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import { ReadMoreCardComponent } from '../read-more-card/read-more-card.componen
         ActivityComponent,
         LanguageSwitchComponent,
         ReadMoreComponent,
-        ReadMoreCardComponent
+        ReadMoreCardComponent,
+        AboutToubiComponent
     ],
     imports: [
         MatIconModule,
