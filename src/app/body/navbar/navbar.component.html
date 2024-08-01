@@ -1,7 +1,8 @@
 <nav>
     <ul>
-        <li i18n>Gallery</li>
-        <li i18n>Events</li>
-        <li i18n>Read More</li>
+        <li *ngFor="let e of titles" (click)="scrollToSection(e.id)">
+            <h4>{{e.name}}</h4>
+        </li>
     </ul>
 </nav>
+<app-logo></app-logo>

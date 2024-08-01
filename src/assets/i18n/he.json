@@ -1,4 +1,12 @@
 {
+    "navbar": {
+        "app-about-toubi": "תאופיק טובי",
+        "app-about-house": "על הבית",
+        "app-activities": "אירועים",
+        "app-gallery": "גלריה",
+        "app-read-more": "לקרוא עוד",
+        "app-footer": "צור קשר"
+    },
     "intro": {
         "h1": "בית טובי",
         "h3": "בקטע זה תתארו במילים ספורות מהו המקום הזה"

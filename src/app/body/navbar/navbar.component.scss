@@ -1,24 +1,43 @@
 :host {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    color: var(--text);
-    font-size: large;
+    display: none;
 }
 
-nav {
-    margin-right: 5vw;
+app-logo {
+    display: none;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-items: right;
-    gap: 35px;
-    justify-content: right;
-}
+// Desktop
+@media (min-width:1281px) {
+    :host {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--padding-sides-desktop);
+    }
 
-ul li {
-    margin-right: 20px;
+    h4 {
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        list-style-type: none;
+
+        gap: 2rem;
+    }
+
+    app-logo {
+        padding: 2rem 0;
+        display: block;
+
+        float: left;
+
+        height: 100px;
+        width: 100px;
+    }
 }

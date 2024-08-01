@@ -8,6 +8,7 @@ import { LanguageService } from './services/language.service';
 import { ReadMoreComponent } from './read-more/read-more.component';
 import { AboutToubiComponent } from './about-toubi/about-toubi.component';
 import { AboutHouseComponent } from './about-house/about-house.component';
+import { NavbarComponent } from './body/navbar/navbar.component';
 
 @Component({
     selector: 'app-root',
@@ -45,13 +46,14 @@ export class AppComponent {
 
     createAllComponents() {
         if (!this.container) return
-        let ref = this.container.createComponent(IntroComponent);
-        ref = this.container.createComponent(AboutToubiComponent);
-        ref = this.container.createComponent(AboutHouseComponent);
-        ref = this.container.createComponent(ActivitiesComponent);
-        ref = this.container.createComponent(GalleryComponent);
-        ref = this.container.createComponent(ReadMoreComponent);
-        ref = this.container.createComponent(FooterComponent);
+        this.container.createComponent(NavbarComponent);
+        this.container.createComponent(IntroComponent);
+        this.container.createComponent(AboutToubiComponent);
+        this.container.createComponent(AboutHouseComponent);
+        this.container.createComponent(ActivitiesComponent);
+        this.container.createComponent(GalleryComponent);
+        this.container.createComponent(ReadMoreComponent);
+        this.container.createComponent(FooterComponent);
     }
 }
 
