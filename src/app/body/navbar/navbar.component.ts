@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
+import { hideBackdrop } from 'src/app/utils/misc';
 
 type Titles = {
     name: string;
@@ -14,6 +16,7 @@ type Titles = {
 export class NavbarComponent {
     readonly SECTION = 'navbar'
     public titles: Titles[] = [];
+    icon = faBars
 
     constructor(private translate: TranslateService) {
         this.translate.get(this.SECTION).subscribe((res: Object) => {
@@ -30,5 +33,9 @@ export class NavbarComponent {
                 section.scrollIntoView({ behavior: 'smooth' });
             }
         }
+    }
+
+    handlerOpenMenu(): void {
+        hideBackdrop()
     }
 }

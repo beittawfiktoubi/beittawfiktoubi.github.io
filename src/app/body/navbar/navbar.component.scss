@@ -1,9 +1,27 @@
 :host {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 var(--p1);
+    margin-bottom: 0;
+}
+
+nav {
     display: none;
 }
 
 app-logo {
-    display: none;
+    display: block;
+    padding: 1rem 0 0 0;
+    height: 100px;
+    width: 100px;
+}
+
+h5 {
+    padding: 0 1rem;
+}
+
+ul {
+    list-style-type: none;
 }
 
 // Desktop
@@ -16,6 +34,14 @@ app-logo {
         padding: 0 var(--padding-sides-desktop);
     }
 
+    nav {
+        display: block;
+    }
+
+    div {
+        display: none;
+    }
+
     h4 {
         cursor: pointer;
     }
@@ -26,18 +52,14 @@ app-logo {
         align-items: center;
         justify-content: space-between;
 
-        list-style-type: none;
 
         gap: 2rem;
     }
 
     app-logo {
         padding: 2rem 0;
-        display: block;
 
         float: left;
 
-        height: 100px;
-        width: 100px;
     }
 }

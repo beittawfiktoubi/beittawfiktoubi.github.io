@@ -45,6 +45,7 @@
 }
 
 .mat-mdc-menu-panel {
+    direction: var(--main-direction);
     min-width: 0 !important;
 }
 
