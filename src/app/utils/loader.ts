@@ -1,4 +1,4 @@
-import { imagesPaths, vidPaths } from "../constants/strings";
+import { imagesPaths } from "../constants/strings";
 
 export class Loader {
     private countImagesLoaded: number = 0;
