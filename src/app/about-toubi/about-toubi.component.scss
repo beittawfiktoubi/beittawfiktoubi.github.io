@@ -11,7 +11,7 @@
     gap: var(--p1);
 }
 
-img {
+app-image {
     width: 200px;
     height: 200px;
     clip-path: inset(1% round 50%);
@@ -37,7 +37,7 @@ img {
         max-width: 600px;
     }
 
-    img {
+    app-image {
         float: left;
     }
 

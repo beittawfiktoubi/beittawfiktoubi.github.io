@@ -2,7 +2,7 @@
     margin-top: 5rem;
 }
 
-img {
+app-image {
     object-fit: cover;
     object-position: center;
 }
@@ -27,12 +27,12 @@ div {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    img {
+    app-image {
         aspect-ratio: 1;
         transition: scale .2s;
     }
 
-    img:hover {
+    app-image:hover {
         scale: 1.03;
     }
 
@@ -43,7 +43,7 @@ div {
 
 // Mobile on the side
 @media (orientation: landscape) and (max-width: 1281px) {
-    img {
+    app-image {
         height: 80vh;
     }
 

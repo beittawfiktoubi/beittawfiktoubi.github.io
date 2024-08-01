@@ -1,0 +1,32 @@
+:host {
+    object-fit: cover;
+    object-position: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+div {
+    width: 100%;
+    height: 100%;
+}
+
+.blurred-img {
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blurred-img img {
+    transition: opacity 250ms ease-in-out;
+    opacity: 0;
+}
+
+.blurred-img.loaded img {
+    opacity: 1;
+}

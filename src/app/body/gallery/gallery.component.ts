@@ -61,10 +61,10 @@ export class GalleryComponent {
 
     readonly dialog = inject(MatDialog);
 
-    openImageDialog(img: HTMLImageElement) {
+    openImageDialog(img: string) {
         showBackdrop()
         const dialogRef = this.dialog.open(DialogImageComponent, {
-            data: { imagePath: img.src }
+            data: { imagePath: img }
         });
     }
 }

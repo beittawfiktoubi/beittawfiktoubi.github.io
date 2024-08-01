@@ -21,6 +21,7 @@ import { ReadMoreComponent } from '../read-more/read-more.component';
 import { ReadMoreCardComponent } from '../read-more-card/read-more-card.component';
 import { AboutToubiComponent } from '../about-toubi/about-toubi.component';
 import { AboutHouseComponent } from '../about-house/about-house.component';
+import { ImageComponent } from '../image/image.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { AboutHouseComponent } from '../about-house/about-house.component';
         ReadMoreComponent,
         ReadMoreCardComponent,
         AboutToubiComponent,
-        AboutHouseComponent
+        AboutHouseComponent,
+        ImageComponent
     ],
     imports: [
         MatIconModule,
