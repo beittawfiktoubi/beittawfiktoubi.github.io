@@ -3,6 +3,15 @@
     height: 100%;
 }
 
+.note-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--p1);
+    box-sizing: border-box;
+}
+
 .outer-box {
     display: flex;
     flex-direction: column;
@@ -39,5 +48,13 @@
     .outer-box {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Desktop
+@media (min-width:1281px) {
+    .outer-box {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
     }
 }
