@@ -6,6 +6,7 @@
 :root {
     --text: hsl(246, 76%, 95%);
     --background: hsl(240, 60%, 1%);
+    --background-mid: #0f0f0f;
     --background-light: #1E1E1E;
     --primary: hsl(310, 27%, 74%);
     --secondary: hsl(11, 23%, 32%);
@@ -21,7 +22,16 @@
     --p1: 1rem;
     --p2: 2rem;
     --padding-sides-desktop: 10rem;
+
+    // mat-menu 
+    --mat-menu-container-shape: 20px;
+    --mat-menu-item-label-text-line-height: 0;
+    --mat-menu-item-label-text-size: 1.2rem;
+    --mat-menu-item-label-text-font: 'Cormorant+Garamond', 'Heebo', 'IBM+Plex+Sans+Arabic', sans-serif;
+    --mat-menu-item-label-text-weight: 400;
+    --mat-menu-container-color: var(--background-mid);
 }
+
 
 .main-direction {
     direction: var(--main-direction);
@@ -44,9 +54,14 @@
     background: var(--backdrop-color);
 }
 
+.cdk-overlay-pane {
+    margin-top: 1rem;
+}
+
 .mat-mdc-menu-panel {
     direction: var(--main-direction);
     min-width: 0 !important;
+    border: solid 1px var(--primary);
 }
 
 html,

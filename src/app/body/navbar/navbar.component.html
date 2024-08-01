@@ -10,9 +10,9 @@
         <fa-icon [icon]="icon" size="3x"></fa-icon>
     </button>
     <mat-menu #menu="matMenu" yPosition="below" xPosition="before" [overlapTrigger]="false">
-        <div *ngFor="let e of titles" (click)="scrollToSection(e.id)">
+        <button mat-menu-item *ngFor="let e of titles" (click)="scrollToSection(e.id)">
             <h5>{{e.name}}</h5>
-        </div>
+        </button>
     </mat-menu>
 </div>
 <app-logo></app-logo>
