@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
 import { IntroComponent } from './intro/intro.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ActivitiesComponent } from './activities/activities.component';
@@ -30,7 +29,6 @@ import { AboutHouseComponent } from '../about-house/about-house.component';
         GalleryComponent,
         ActivitiesComponent,
         VideoComponent,
-        HeaderComponent,
         IntroComponent,
         FooterComponent,
         LogoComponent,
@@ -54,7 +52,6 @@ import { AboutHouseComponent } from '../about-house/about-house.component';
     exports: [
         LanguageSwitchComponent,
         LoaderComponent,
-        HeaderComponent,
         IntroComponent,
         GalleryComponent,
         ActivitiesComponent,
