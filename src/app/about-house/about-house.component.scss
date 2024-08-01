@@ -28,12 +28,14 @@ img {
     }
 
     #con {
+        direction: var(--opposite-direction);
         display: flex;
         flex-direction: row;
         gap: 10rem;
     }
 
     #text-con {
+        direction: var(--main-direction);
         max-width: 600px;
     }
 

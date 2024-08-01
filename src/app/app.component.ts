@@ -7,6 +7,7 @@ import { FooterComponent } from './body/footer/footer.component';
 import { LanguageService } from './services/language.service';
 import { ReadMoreComponent } from './read-more/read-more.component';
 import { AboutToubiComponent } from './about-toubi/about-toubi.component';
+import { AboutHouseComponent } from './about-house/about-house.component';
 
 @Component({
     selector: 'app-root',
@@ -46,6 +47,7 @@ export class AppComponent {
         if (!this.container) return
         let ref = this.container.createComponent(IntroComponent);
         ref = this.container.createComponent(AboutToubiComponent);
+        ref = this.container.createComponent(AboutHouseComponent);
         ref = this.container.createComponent(ActivitiesComponent);
         ref = this.container.createComponent(GalleryComponent);
         ref = this.container.createComponent(ReadMoreComponent);
