@@ -1,6 +1,6 @@
 <div id="con">
     <div id="text-con">
-        <h1>{{ section + "h1" | translate }}</h1>
+        <h1 [innerHTML]="section + 'h1' | translate"></h1>
         <p [innerHTML]="section + 'p' | translate"></p>
     </div>
     <app-image [src]="src"></app-image>

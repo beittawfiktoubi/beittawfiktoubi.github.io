@@ -18,10 +18,6 @@ div {
 
 // Desktop
 @media (min-width:1281px) {
-    :host {
-        padding: 0 var(--padding-sides-desktop);
-    }
-
     div {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

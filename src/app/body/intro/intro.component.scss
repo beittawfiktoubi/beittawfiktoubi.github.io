@@ -16,9 +16,6 @@
 
 // Desktop
 @media (min-width:1281px) {
-    :host {
-        padding: 0 var(--padding-sides-desktop);
-    }
 
     #intro-con {
         display: flex;

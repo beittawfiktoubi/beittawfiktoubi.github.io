@@ -1,7 +1,3 @@
-:host {
-    padding: 0 var(--p1);
-}
-
 #con {
     width: 100%;
     display: flex;
@@ -23,9 +19,6 @@ app-image {
 
 // Desktop
 @media (min-width:1281px) {
-    :host {
-        padding: 0 var(--padding-sides-desktop);
-    }
 
     #con {
         display: flex;

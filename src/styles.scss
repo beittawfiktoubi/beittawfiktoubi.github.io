@@ -21,7 +21,9 @@
     // padding
     --p1: 1rem;
     --p2: 2rem;
-    --padding-sides-desktop: 10rem;
+    --ps-desktop: 10rem;
+    --ps-mobile: 2rem;
+    --ps-landscape: 3em;
 
     // mat-menu 
     --mat-menu-container-shape: 20px;
@@ -98,8 +100,25 @@ app-root>* {
 @media (min-width:1281px) {
     app-root>* {
         margin-bottom: 10rem;
+        padding: 0 var(--ps-desktop);
     }
 }
+
+// Mobile
+@media (max-width: 1281px) {
+    app-root>* {
+        padding: 0 var(--ps-mobile);
+    }
+}
+
+// Mobile on the Side
+@media (orientation: landscape) and (max-width: 1281px) {
+    app-root>* {
+        padding: 0 var(--ps-landscape);
+    }
+}
+
+
 
 .fa-spin {
     animation: fa-spin 6s infinite linear !important;

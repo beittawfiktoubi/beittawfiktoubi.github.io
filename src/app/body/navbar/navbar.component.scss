@@ -1,7 +1,6 @@
 :host {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 var(--p1);
     margin-bottom: 0;
 }
 
@@ -31,7 +30,6 @@ ul {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 var(--padding-sides-desktop);
     }
 
     nav {
