@@ -15,6 +15,12 @@ export class ReadMoreComponent {
     {
       id: "1",
     },
+    {
+      id: "2",
+    },
+    {
+      id: "3",
+    },
   ]
   private observer!: IntersectionObserver;
 
@@ -48,5 +54,87 @@ export class ReadMoreComponent {
     }
   }
 
+  isCardCenterLeft(i: number): boolean {
+    if (this.isMobile()) {
+      return false;
+    }
+
+    if (i === 0) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isCardRight(i: number): boolean {
+    if (this.isMobile()) {
+      return (i % 2) === 0;
+    }
+
+    if (i === 1) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isCardCenterRight(i: number): boolean {
+    if (this.isMobile()) {
+      return false;
+    }
+
+    if (i === 2) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isCardLeft(i: number): boolean {
+    if (this.isMobile()) {
+      return (i % 2) !== 0;
+    }
+
+    if (i === 3) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isDirectionRight(i: number): boolean {
+    if (this.isMobile()) {
+      return (i % 2) === 0;
+    }
+    if (i === 1) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isDirectionLeft(i: number): boolean {
+    if (this.isMobile()) {
+      return (i % 2) !== 0;
+    }
+    if (i === 3 || i === 0) {
+      return true;
+    }
+    return false;
+  }
+
+  isSmall(i: number): boolean {
+    if (!this.isMobile()) {
+      if (i === 0 || i === 2) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+
+  isMobile(): boolean {
+    return window.matchMedia('(max-width: 1281px)').matches;
+  }
 
 }

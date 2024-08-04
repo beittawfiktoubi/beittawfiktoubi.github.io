@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild, viewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, Input, ViewChild, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-image',
@@ -7,7 +7,7 @@ import { Component, ElementRef, Input, ViewChild, viewChild } from '@angular/cor
 })
 export class ImageComponent {
   @Input() src!: string;
-  @Input() smallSrc?: string;
+  smallSrc!: string;
 
   @ViewChild('blurredImage') blurredImage!: ElementRef<HTMLImageElement>;
   @ViewChild('image') image!: ElementRef<HTMLImageElement>;
@@ -16,9 +16,13 @@ export class ImageComponent {
     this.blurredImage.nativeElement.classList.add("loaded")
   }
 
+  constructor(private cdr: ChangeDetectorRef) { }
+
+
   ngAfterViewInit() {
     if (!this.smallSrc) {
       this.smallSrc = this.src.replace(/(.*)(\..*)/, '$1-small$2');
+      this.cdr.detectChanges();
     }
     if (this.image.nativeElement.complete) {
       this.loaded()

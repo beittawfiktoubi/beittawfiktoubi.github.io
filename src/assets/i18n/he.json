@@ -34,11 +34,21 @@
     },
     "links": {
         "0": {
-            "title": "קרא עוד",
-            "linkAddress": "https://shimur.org/signs/בית-תאופיק-טובי/",
-            "linkText": "shimur.com"
+            "title": "הגלילה",
+            "linkAddress": "https://shimur.org/wp-content/uploads/2021/11/Hagalila-49.pdf",
+            "linkText": "הגלילה"
         },
         "1": {
+            "title": "שימור",
+            "linkAddress": "https://shimur.org/signs/%D7%91%D7%99%D7%AA-%D7%AA%D7%90%D7%95%D7%A4%D7%99%D7%A7-%D7%98%D7%95%D7%91%D7%99/",
+            "linkText": "שימור"
+        },
+        "2": {
+            "title": "שימור חיפה",
+            "linkAddress": "https://he.wikipedia.org/wiki/תופיק_טובי",
+            "linkText": "wikipedia.com"
+        },
+        "3": {
             "title": "שימור חיפה",
             "linkAddress": "https://he.wikipedia.org/wiki/תופיק_טובי",
             "linkText": "wikipedia.com"

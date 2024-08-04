@@ -1,13 +1,16 @@
 <div *ngFor="let e of links; let i = index" [ngClass]="
 {
-    'dir-right': (i % 2) === 0,
-    'dir-left': (i % 2) !== 0,
+    'dir-right': isDirectionRight(i),
+    'dir-left': isDirectionLeft(i),
+    'is-small': isSmall(i),
 }
 ">
     <app-read-more-card [link]="e" [ngClass]="
 {
-    'right-card': (i % 2) === 0,
-    'left-card': (i % 2) !== 0,
+    'center-left-card': isCardCenterLeft(i),
+    'center-right-card': isCardCenterRight(i),
+    'right-card': isCardRight(i),
+    'left-card': isCardLeft(i),
 }
 "></app-read-more-card>
 </div>
