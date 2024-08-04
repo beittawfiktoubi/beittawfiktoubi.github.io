@@ -1,4 +1,4 @@
-<div #scrollContainer (scroll)="onScroll(dots)" class="ps1 no-scrollbar scroll">
+<div #scrollContainer (scroll)="onScroll(dots)" class="no-scrollbar scroll">
     <app-activity class="scroll-child" *ngFor="let a of activities; let i = index "
         title="{{ 'activities.' + a.id + '.title' | translate}}"
         paragraph="{{ 'activities.' + a.id + '.paragraph' | translate}}" img="{{a.img}}" [ngClass]="

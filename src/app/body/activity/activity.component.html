@@ -1,8 +1,8 @@
 <div class="full-width">
     <div class="small-width">
         <div class="text-con">
-            <h2>{{title}}</h2>
-            <p>{{paragraph}}</p>
+            <h2 [innerHTML]="title | translate"></h2>
+            <p [innerHTML]="paragraph | translate"></p>
         </div>
         <app-image src="{{img}}"></app-image>
     </div>

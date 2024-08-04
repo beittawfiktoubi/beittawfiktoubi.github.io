@@ -1,10 +1,31 @@
 div {
-    height: 60vh;
     width: 100%;
     box-sizing: border-box;
 
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+// Mobile
+@media (max-width: 1281px) {
+    :host {
+        padding: 0;
+    }
+
+    div {
+        height: 85vh;
+    }
+}
+
+// Mobile on the Side
+@media (orientation: landscape) and (max-width: 1281px) {
+    :host {
+        padding: 0
+    }
+
+    div {
+        height: 75vh;
+    }
 }
 
 // Desktop

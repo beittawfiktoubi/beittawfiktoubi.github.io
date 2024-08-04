@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 var(--p1);
 }
 
 .small-width {
@@ -34,6 +35,21 @@ app-image {
 }
 
 // Desktop
+@media (min-width:1281px),
+(orientation: landscape) {
+    .text-con {
+        flex: 10;
+        max-width: 70%;
+    }
+
+    app-image {
+        flex: 1;
+    }
+
+}
+
+
+// Desktop
 @media (min-width:1281px) {
     .full-width {
         width: 80%;
@@ -41,14 +57,25 @@ app-image {
 
     .text-con {
         direction: rtl;
+        padding: 0 var(--p2);
+        padding-bottom: var(--p1)
+    }
+
+    .small-width {
+        display: flex;
+        flex-direction: row;
     }
 
 }
 
 @media (orientation: landscape) {
+    .full-width {
+        padding: 0 var(--p2)
+    }
+
     .small-width {
         display: flex;
-        width: 80%;
+        flex-direction: row;
     }
 
     .text-con {
