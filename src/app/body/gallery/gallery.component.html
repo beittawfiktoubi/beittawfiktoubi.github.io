@@ -1,4 +1,4 @@
-<div (scroll)="onScroll(dots)" #scrollContainer class="ps1 no-scrollbar scroll">
+<div (scroll)="onScroll(dots)" #scrollContainer class="no-scrollbar scroll">
     <app-image *ngFor="let image of imageList" (click)="openImageDialog(image.src)" class="pointer scroll-child"
         [src]="image.src"></app-image>
 </div>

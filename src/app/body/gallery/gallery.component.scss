@@ -9,18 +9,33 @@ app-image {
 
 div {
     box-sizing: border-box;
-    height: 60vh;
     width: 100%;
 
-    gap: 1rem;
     margin-bottom: 1rem;
 }
+
+// Mobile
+@media (max-width: 1281px) {
+    :host {
+        padding: 0;
+    }
+
+    div {
+        gap: var(--ps-mobile);
+        padding: 0 var(--ps-mobile);
+        height: 85vh;
+    }
+}
+
+
 
 // Desktop
 @media (min-width:1281px) {
     div {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: var(--p1);
+
     }
 
     app-image {
@@ -44,8 +59,8 @@ div {
     }
 
     div {
-        gap: 10rem;
-        height: 80vh;
-        width: 80%;
+        padding: 0 var(--ps-landscape);
+        height: 75vh;
+        gap: var(--ps-landscape);
     }
 }
