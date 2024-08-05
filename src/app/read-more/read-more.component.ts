@@ -27,23 +27,17 @@ export class ReadMoreComponent {
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngAfterViewInit() {
-    const leftCards: NodeList = this.el.nativeElement.querySelectorAll('.left-card');
-    const rightCards: NodeList = this.el.nativeElement.querySelectorAll('.right-card');
+    const cards: NodeList = this.el.nativeElement.querySelectorAll('.fade-in');
 
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.renderer.addClass(entry.target, 'visible');
-        } else {
-          this.renderer.removeClass(entry.target, 'visible');
         }
       });
     });
 
-    leftCards.forEach((card: any) => {
-      this.observer.observe(card);
-    });
-    rightCards.forEach((card: any) => {
+    cards.forEach((card: any) => {
       this.observer.observe(card);
     });
   }

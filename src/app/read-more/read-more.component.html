@@ -1,3 +1,6 @@
+<div class="dir-right is-small" [style]="{'padding-bottom': '5rem'}">
+    <h1>{{ "links.title" | translate }}</h1>
+</div>
 <div *ngFor="let e of links; let i = index" [ngClass]="
 {
     'dir-right': isDirectionRight(i),
@@ -7,6 +10,7 @@
 ">
     <app-read-more-card [link]="e" [ngClass]="
 {
+    'fade-in': true,
     'center-left-card': isCardCenterLeft(i),
     'center-right-card': isCardCenterRight(i),
     'right-card': isCardRight(i),
