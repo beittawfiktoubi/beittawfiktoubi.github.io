@@ -3,5 +3,8 @@
         <h1 [innerHTML]="section + 'h1' | translate"></h1>
         <p [innerHTML]="section + 'p' | translate"></p>
     </div>
-    <app-image [src]="src"></app-image>
+    <div id="block">
+        <app-image [src]="src"></app-image>
+        <p [innerHTML]="section + 'credit' | translate"></p>
+    </div>
 </div>

@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AboutToubiComponent {
   readonly section = "about-toubi."
-  readonly src = "assets/images/gallery/1.jpg"
+  readonly src = "assets/images/toubi.jpg"
 }

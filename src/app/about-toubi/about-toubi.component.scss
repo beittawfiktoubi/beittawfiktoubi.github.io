@@ -10,12 +10,17 @@
 app-image {
     width: 200px;
     height: 200px;
-    clip-path: inset(1% round 50%);
-    shape-outside: inset(1% round 50%);
+    clip-path: inset(1% round 40%);
+    // shape-outside: inset(1% round 50%);
     object-fit: cover;
     object-position: center;
 }
 
+#block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 // Desktop
 @media (min-width:1281px) {
