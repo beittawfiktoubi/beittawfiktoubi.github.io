@@ -34,6 +34,9 @@
     --mat-menu-container-color: var(--background-mid);
 }
 
+a {
+    color: #1E90FF;
+}
 
 .main-direction {
     direction: var(--main-direction);
@@ -110,6 +113,8 @@ app-root>* {
         padding: 0 var(--ps-mobile);
     }
 }
+
+
 
 // Mobile on the Side
 @media (orientation: landscape) and (max-width: 1281px) {

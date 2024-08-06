@@ -16,23 +16,22 @@ app-image {
     object-position: center;
 }
 
+#img-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 // Desktop
 @media (min-width:1281px) {
-
     #con {
         display: flex;
         flex-direction: row;
-        gap: 10rem;
     }
 
     #text-con {
         max-width: 600px;
     }
-
-    app-image {
-        float: left;
-    }
-
 
 }
