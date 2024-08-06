@@ -10,8 +10,8 @@
 app-image {
     width: 200px;
     height: 200px;
-    clip-path: inset(1% round 40%);
-    // shape-outside: inset(1% round 50%);
+    border-radius: var(--border-radius);
+    overflow: hidden;
     object-fit: cover;
     object-position: center;
 }

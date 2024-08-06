@@ -8,17 +8,24 @@
 }
 
 app-image {
-    width: 200px;
-    height: 200px;
+    height: 250px;
+    width: 100%;
     border-radius: var(--border-radius);
+    overflow: hidden;
     object-fit: cover;
     object-position: center;
 }
 
+// Mobile on the Side
+@media (orientation: landscape) and (max-width: 1281px) {
+    app-image {
+        height: 340px;
+        width: 100%;
+    }
+}
 
 // Desktop
 @media (min-width:1281px) {
-
     #con {
         direction: var(--opposite-direction);
         display: flex;
@@ -33,7 +40,7 @@ app-image {
 
     app-image {
         float: left;
+        height: 300px;
+        width: 350px;
     }
-
-
 }
