@@ -5,6 +5,7 @@
             <p [innerHTML]="paragraph | translate"></p>
             <p *ngIf="credit">{{credit | translate}}</p>
         </div>
-        <app-image src="{{img}}"></app-image>
+        <app-image *ngIf="img" src="{{img}}"></app-image>
+        <app-jane *ngIf="!img"></app-jane>
     </div>
 </div>

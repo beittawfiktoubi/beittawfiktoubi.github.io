@@ -4,7 +4,7 @@ import { GalleryDotsComponent } from 'src/app/gallery-dots/gallery-dots.componen
 
 type ActivityComponentProps = {
     id: string;
-    img: string;
+    img?: string;
 }
 
 @Component({
@@ -21,7 +21,6 @@ export class ActivitiesComponent {
         },
         {
             id: "1",
-            img: "assets/images/activities/2.jpg",
         },
         {
             id: "2",
