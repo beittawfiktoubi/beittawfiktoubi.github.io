@@ -17,7 +17,7 @@ export class ActivitiesComponent {
     public activities: ActivityComponentProps[] = [
         {
             id: "0",
-            img: "assets/images/activities/1.jpg"
+            img: "assets/images/activities/museum.jpg",
         },
         {
             id: "1",
