@@ -52,7 +52,7 @@ export class AppComponent {
         this.container.createComponent(AboutHouseComponent);
         this.container.createComponent(ActivitiesComponent);
         this.container.createComponent(GalleryComponent);
-        this.container.createComponent(ReadMoreComponent);
+        // this.container.createComponent(ReadMoreComponent); - no need. we added the links somewhere else
         this.container.createComponent(FooterComponent);
     }
 }
