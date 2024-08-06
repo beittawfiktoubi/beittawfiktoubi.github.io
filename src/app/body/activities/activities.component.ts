@@ -26,6 +26,10 @@ export class ActivitiesComponent {
         {
             id: "2",
             img: "assets/images/activities/3.jpg",
+        },
+        {
+            id: "3",
+            img: "assets/images/activities/4.jpg",
         }
     ];
 

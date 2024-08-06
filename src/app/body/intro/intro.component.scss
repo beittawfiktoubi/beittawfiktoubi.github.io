@@ -1,34 +1,8 @@
-#text-con {
-    // margin-top: 0;
-}
 
-#intro-con {
-    // height: 100%;
-    // width: 100%;
-}
-
-// #lang-con {
-//     box-sizing: border-box;
-//     height: auto;
-//     padding: 2rem 2rem 0 2rem;
-//     width: 100%;
+// :host {
+//     height: 70vh;
 // }
 
 // Desktop
 @media (min-width:1281px) {
-
-    #intro-con {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 4rem;
-        width: 100%;
-    }
-
-    app-video {
-        flex: 3;
-    }
-
-    #text-con {
-        flex: 1;
-    }
 }

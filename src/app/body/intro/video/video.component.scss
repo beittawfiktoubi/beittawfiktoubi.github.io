@@ -2,23 +2,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+
 }
 
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
 
 // Desktop
 @media (min-width:1281px) {
-    iframe {
-        width: 100%;
-        aspect-ratio: 16/9;
-        max-width: 100%;
-        max-height: 100%;
-    }
+  :host {
+    max-height: 70vh;
+  }
 }
 
 // Mobile on the side
 @media (orientation: landscape) and (max-width: 1281px) {
     iframe {
-        width: 90vw;
-        height: 90vh;
+        max-height: 60vh;
     }
 }
