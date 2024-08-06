@@ -3,7 +3,7 @@
         <div class="text-con">
             <h2 [innerHTML]="title | translate"></h2>
             <p [innerHTML]="paragraph | translate"></p>
-            <p *ngIf="credit">{{credit | translate}}</p>
+            <p class="credit" *ngIf="credit">{{credit | translate}}</p>
         </div>
         <app-image *ngIf="img" src="{{img}}"></app-image>
         <app-jane *ngIf="!img"></app-jane>
