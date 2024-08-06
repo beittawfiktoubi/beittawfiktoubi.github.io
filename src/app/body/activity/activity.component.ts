@@ -10,4 +10,5 @@ export class ActivityComponent {
   @Input() paragraph: string = 'missing';
   @Input() credit?: string;
   @Input() img?: string;
+
 }

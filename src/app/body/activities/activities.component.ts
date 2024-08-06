@@ -24,7 +24,7 @@ export class ActivitiesComponent {
         },
         {
             id: "2",
-            img: "assets/images/activities/3.jpg",
+            img: "assets/images/activities/100-years.jpg",
         },
         {
             id: "3",
