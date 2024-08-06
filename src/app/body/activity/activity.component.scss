@@ -21,10 +21,14 @@
     background: var(--background-light);
 
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+
 .text-con {
-    height: 50%;
     padding: 0 .8rem;
 }
 
@@ -34,20 +38,6 @@ app-image {
     object-fit: cover;
 }
 
-// Desktop
-@media (min-width:1281px),
-(orientation: landscape) {
-    .text-con {
-        flex: 10;
-        max-width: 70%;
-    }
-
-    app-jane,
-    app-image {
-        flex: 1;
-    }
-
-}
 
 
 // Desktop
@@ -59,7 +49,7 @@ app-image {
     .text-con {
         direction: rtl;
         padding: 0 var(--p2);
-        padding-bottom: var(--p1)
+        padding-bottom: var(--p1);
     }
 
     .small-width {
@@ -67,9 +57,24 @@ app-image {
         flex-direction: row;
     }
 
+    app-jane{
+        width: 300px;
+    }
+
 }
 
-@media (orientation: landscape) {
+// Mobile on the Side
+@media (orientation: landscape) and (max-width: 1281px) {
+    .text-con {
+        flex: 10;
+        max-width: 70%;
+    }
+
+    app-jane,
+    app-image {
+        flex: 1;
+    }
+    
     .full-width {
         padding: 0 var(--p2)
     }
