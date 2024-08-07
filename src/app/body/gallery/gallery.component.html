@@ -2,4 +2,5 @@
     <app-image *ngFor="let image of imageList" (click)="openImageDialog(image.src)" class="pointer scroll-child"
         [src]="image.src"></app-image>
 </div>
-<app-gallery-dots #dots [activeIndex]="activeIndex" [len]="imageList.length"></app-gallery-dots>
+<app-gallery-dots #dots [activeIndex]="activeIndex" [len]="imageList.length"
+    [onDotClicked]="handleDotClick"></app-gallery-dots>

@@ -10,4 +10,5 @@
         ">
     </app-activity>
 </div>
-<app-gallery-dots #dots [activeIndex]="activeIndex" [len]="activities.length"></app-gallery-dots>
+<app-gallery-dots #dots [onDotClicked]="handleDotClick" [activeIndex]="activeIndex"
+    [len]="activities.length"></app-gallery-dots>

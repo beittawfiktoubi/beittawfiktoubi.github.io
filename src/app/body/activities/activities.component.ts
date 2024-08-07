@@ -39,6 +39,17 @@ export class ActivitiesComponent {
     activeIndex = 0;
     onScroll(dots: GalleryDotsComponent) {
         const element = this.scrollContainer.nativeElement;
-        this.activeIndex = dots.scrollHandler(element);
+        const tmpIndex= dots.scrollHandler(element);
+        this.activeIndex = tmpIndex
+    }
+
+    handleDotClick = (i: number) => {
+        this.scrollToElement(i);
+    }
+
+    scrollToElement(i: number): void {
+        if (this.scrollContainer) {
+            this.scrollContainer.nativeElement.children[i].scrollIntoView({ inline: 'center', behavior: 'smooth' });
+        }
     }
 }

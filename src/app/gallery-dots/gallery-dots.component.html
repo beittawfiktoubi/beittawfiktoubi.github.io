@@ -1,1 +1,2 @@
-<fa-icon *ngFor="let d of dots" [icon]="d" size="2xs"></fa-icon>
+<fa-icon *ngFor="let d of dots; let i = index" [icon]="d" size="2xs" (click)="handleDotClick(i)"
+    class="pointer"></fa-icon>

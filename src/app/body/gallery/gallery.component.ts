@@ -67,5 +67,16 @@ export class GalleryComponent {
             data: { imagePath: img }
         });
     }
+
+    handleDotClick = (i: number) => {
+        this.scrollToElement(i);
+    }
+
+    scrollToElement(i: number): void {
+        if (this.scrollContainer) {
+            this.scrollContainer.nativeElement.children[i].scrollIntoView({ inline: 'center', behavior: 'smooth' });
+        }
+    }
+
 }
 

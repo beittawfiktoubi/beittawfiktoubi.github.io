@@ -11,6 +11,7 @@ import { faCircle as regular } from '@fortawesome/free-regular-svg-icons';
 export class GalleryDotsComponent {
   @Input() len!: number;
   @Input() activeIndex!: number;
+  @Input() onDotClicked?: (index: number) => void;
 
   dots?: IconProp[];
   regular = regular
@@ -43,4 +44,12 @@ export class GalleryDotsComponent {
       }
     }
   }
+
+  handleDotClick(i: number) {
+    if (this.onDotClicked) {
+      this.onDotClicked(i)
+    }
+  }
+
+
 }
