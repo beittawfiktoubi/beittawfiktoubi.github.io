@@ -3,7 +3,6 @@ div {
     box-sizing: border-box;
 
     gap: 1rem;
-    overflow: visible;
 
     margin-bottom: 1rem;
 }
@@ -33,6 +32,8 @@ div {
     }
 
     div {
+        overflow: visible;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
