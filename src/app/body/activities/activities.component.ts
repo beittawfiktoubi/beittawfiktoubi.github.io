@@ -28,7 +28,7 @@ export class ActivitiesComponent {
         },
         {
             id: "3",
-            img: "assets/images/activities/4.jpg",
+            img: "assets/images/activities/company-event.jpg",
         }
     ];
 
