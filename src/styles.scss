@@ -147,10 +147,12 @@ fa-icon {
     width: 100%;
 
     scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
 }
 
 .scroll-child {
+    scroll-snap-stop: always;
     scroll-snap-align: center;
     // flex-flow: column; maybe no need
 

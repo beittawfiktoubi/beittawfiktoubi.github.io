@@ -1,3 +1,4 @@
+<h1>{{'navbar.app-activities' | translate}}</h1>
 <div #scrollContainer (scroll)="onScroll(dots)" class="no-scrollbar scroll">
     <app-activity class="scroll-child" *ngFor="let a of activities; let i = index "
         title="{{ 'activities.' + a.id + '.title' | translate}}"

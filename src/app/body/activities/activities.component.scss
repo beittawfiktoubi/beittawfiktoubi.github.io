@@ -23,6 +23,10 @@ div {
 
 // Desktop
 @media (min-width:1281px) {
+    h1 {
+        margin-bottom: var(--p2);
+    }
+
     app-gallery-dots {
         display: none;
     }
