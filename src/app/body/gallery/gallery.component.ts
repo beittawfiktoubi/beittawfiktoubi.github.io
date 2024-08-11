@@ -4,7 +4,7 @@ import { DialogImageComponent } from 'src/app/dialog-image/dialog-image.componen
 import { GalleryDotsComponent } from 'src/app/gallery-dots/gallery-dots.component';
 import { showBackdrop } from 'src/app/utils/misc';
 
-class imageList {
+export class imageList {
     constructor(
         public src: string,
         public alt: string
@@ -61,10 +61,10 @@ export class GalleryComponent {
 
     readonly dialog = inject(MatDialog);
 
-    openImageDialog(img: string) {
+    openImageDialog(i: number) {
         showBackdrop()
         const dialogRef = this.dialog.open(DialogImageComponent, {
-            data: { imagePath: img }
+            data: { images: this.imageList, index: i }
         });
     }
 

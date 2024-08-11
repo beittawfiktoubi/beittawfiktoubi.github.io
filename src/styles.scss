@@ -145,9 +145,15 @@ fa-icon {
 
     height: auto;
     width: 100%;
+
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
 }
 
 .scroll-child {
+    scroll-snap-align: center;
+    // flex-flow: column; maybe no need
+
     width: 100%;
     flex-shrink: 0;
 

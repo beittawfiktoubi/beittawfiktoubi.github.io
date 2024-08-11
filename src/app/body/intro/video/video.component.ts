@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'app-video',
@@ -6,4 +7,5 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
     styleUrl: './video.component.scss'
 })
 export class VideoComponent {
+    icon = faArrowDownLong
 }

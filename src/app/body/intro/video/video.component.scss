@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 
 iframe {
@@ -11,14 +10,25 @@ iframe {
     aspect-ratio: 16/9;
 }
 
+fa-icon {
+    display: none;
+}
+
 // Desktop
 @media (min-width:1281px) {
-  :host {
-    max-height: 70vh;
-  }
-  iframe {
-    max-height: 70vh;
-}
+    :host {
+        max-height: 70vh;
+        gap: var(--p2);
+        flex-direction: column;
+    }
+
+    fa-icon {
+        display: block;
+    }
+
+    iframe {
+        max-height: 70vh;
+    }
 }
 
 // Mobile on the side
