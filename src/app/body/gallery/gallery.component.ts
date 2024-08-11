@@ -73,7 +73,7 @@ export class GalleryComponent {
     }
 
     scrollToElement(i: number): void {
-        this.scrollContainer.nativeElement.children[i].scrollIntoView({ block: 'center', inline: 'center', behavior: 'smooth' });
+        this.scrollContainer.nativeElement.children[i].scrollIntoView({ block: 'center', inline: 'center', behavior: 'auto' });
     }
 
 }
