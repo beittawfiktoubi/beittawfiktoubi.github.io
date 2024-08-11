@@ -19,7 +19,6 @@
 
     gap: 2rem;
     width: 80%;
-    height: 100%;
     box-sizing: border-box;
 }
 
@@ -50,8 +49,23 @@
     }
 }
 
+// Mobile
+@media (orientation: portrait) and (max-width: 1281px) {
+    :host {
+        height: 100vh;
+        height: 100svh;
+        margin-bottom: 0;
+    }
+
+    .note-box {
+        margin-bottom: var(--p2);
+    }
+    
+}
+
 // Desktop
 @media (min-width:1281px) {
+
     .outer-box {
         display: grid;
         grid-template-columns: 300px 300px 300px;
