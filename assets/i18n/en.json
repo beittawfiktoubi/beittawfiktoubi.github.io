@@ -1,0 +1,50 @@
+{
+    "intro": {
+        "h1": "Beit Tubi",
+        "h3": "In this section You will descried in a few words what is this place"
+    },
+    "activities": {
+        "0": {
+            "title": "Hosting Museum Guests",
+            "paragraph": "One a mouth we are hosting special guests of the Haifa muser to help rise mont from diners. the event will on can play inhume serving wine"
+        },
+        "1": {
+            "title": "Lecture On Hafia's",
+            "paragraph": "Gathering a grope of travelers that are interested in understanding the history of the city."
+        },
+        "2": {
+            "title": "Art Gallery",
+            "paragraph": "We are hosting a special art gallery event for the local artists to showcase their work."
+        }
+    },
+    "links": {
+        "0": {
+            "title": "Read More",
+            "linkAddress": "https://shimur.org/signs/בית-תאופיק-טובי/",
+            "linkText": "shimur.com"
+        },
+        "1": {
+            "title": "Haifa Heritage",
+            "linkAddress": "https://he.wikipedia.org/wiki/תופיק_טובי",
+            "linkText": "wikipedia.com"
+        }
+    },
+    "footer": {
+        "address": {
+            "h3": "Address",
+            "p": "Kiesarya St 18, Haifa"
+        },
+        "email": {
+            "h3": "Email",
+            "p": "example@email.com"
+        },
+        "phone": {
+            "h3": "Phone",
+            "p": "+972-55987854"
+        },
+        "links": {
+            "h3": "Links",
+            "p": "wiki.com"
+        }
+    }
+}
