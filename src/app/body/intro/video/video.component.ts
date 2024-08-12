@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'app-video',
@@ -7,7 +7,7 @@ import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
     styleUrl: './video.component.scss'
 })
 export class VideoComponent {
-    icon = faArrowDownLong
+    icon = faCircleChevronDown
 
     scrollDown(): void {
         const introElement = document.querySelector('app-about-toubi');

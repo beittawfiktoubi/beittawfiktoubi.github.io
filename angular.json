@@ -27,6 +27,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
+              "src/favicon-16x16.png",
+              "src/favicon-32x32.png",
               "src/assets",
               "src/robots.txt",
               "src/sitemap.xml",
@@ -93,7 +95,6 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
