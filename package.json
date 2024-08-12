@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "stage": "ng deploy --no-silent --repo=https://github.com/arikhativa/arikhativa.github.io --branch=main",
-    "publish": "ng deploy --no-silent --repo=https://github.com/bytetobi/bytetobi.github.io --branch=main",
+    "prod": "ng deploy --no-silent --repo=https://github.com/beittawfiktoubi/beittawfiktoubi.github.io --branch=prod --cname=beittawfiktoubi.com",
     "test": "ng test"
   },
   "private": true,
