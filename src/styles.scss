@@ -5,10 +5,12 @@
 
 :root {
     --text: hsl(246, 76%, 95%);
+    --subtext: hsla(243, 76%, 95%, 0.512);
     --background: hsl(240, 60%, 1%);
     --background-mid: #0f0f0f;
     --background-light: #1E1E1E;
     --primary: hsl(310, 27%, 74%);
+    --primary-trans: rgba(207, 171, 201, 0.519);
     --secondary: hsl(11, 23%, 32%);
     --accent: hsl(48, 23%, 58%);
 

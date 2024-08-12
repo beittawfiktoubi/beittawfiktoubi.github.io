@@ -8,4 +8,11 @@ import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
 })
 export class VideoComponent {
     icon = faArrowDownLong
+
+    scrollDown(): void {
+        const introElement = document.querySelector('app-about-toubi');
+        if (introElement) {
+            introElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 }

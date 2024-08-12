@@ -22,6 +22,19 @@
     box-sizing: border-box;
 }
 
+.credit-box {
+    margin-top: var(--p2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: var(--subtext);
+    }
+}
+
+
 .inner-box {
     box-shadow: 0 0 20px -8px var(--primary);
 
@@ -60,7 +73,7 @@
     .note-box {
         margin-bottom: var(--p2);
     }
-    
+
 }
 
 // Desktop
