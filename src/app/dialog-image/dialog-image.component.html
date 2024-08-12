@@ -1,4 +1,10 @@
-<img [src]="currentImage" />
-<div>
+<div id="exit">
     <fa-icon [icon]="icon" size="3x"></fa-icon>
+</div>
+<img [src]="currentImage" />
+<div (click)="goLeft()" id="left" [ngClass]="{'disable':!disableLeft}">
+    <fa-icon [icon]="left" size="3x"></fa-icon>
+</div>
+<div (click)="goRight()" id="right" [ngClass]="{'disable':!disableRight}">
+    <fa-icon [icon]="right" size="3x"></fa-icon>
 </div>

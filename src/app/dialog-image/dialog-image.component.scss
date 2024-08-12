@@ -1,9 +1,54 @@
 div {
-    pointer-events: none;
     position: fixed;
-    top : var(--p1);
-    right: var(--p1);
+    padding: var(--p1);
 }
+
+#exit {
+    pointer-events: none;
+    top: 0;
+    right: 0;
+}
+
 img {
     max-height: 90vh;
+}
+
+#right,
+#left {
+    transform: translateY(50%);
+    cursor: pointer;
+}
+
+#left {
+    left: 0;
+    bottom: 50%;
+}
+
+#right {
+    bottom: 50%;
+    right: 0;
+}
+
+.disable {
+    opacity: .5;
+}
+
+
+// Mobile portrait
+@media (orientation: portrait) and (max-width: 1281px) {
+
+    #right,
+    #left {
+        transform: translateY(0);
+
+        bottom: 0;
+    }
+
+    #left {
+        left: 30%;
+    }
+
+    #right {
+        right: 30%;
+    }
 }

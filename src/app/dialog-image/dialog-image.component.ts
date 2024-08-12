@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, HostListener, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, } from '@angular/material/dialog';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faCircleChevronLeft, faCircleChevronRight, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { imageList } from '../body/gallery/gallery.component';
 @Component({
   selector: 'app-dialog-image',
@@ -10,6 +10,8 @@ import { imageList } from '../body/gallery/gallery.component';
 })
 export class DialogImageComponent {
   icon = faXmark
+  left = faCircleChevronLeft
+  right = faCircleChevronRight
   index: number = 0;
   _currentImage?: imageList;
 
@@ -30,6 +32,27 @@ export class DialogImageComponent {
     }
   }
 
+  goLeft = () => {
+    if (this.index === this.data.images.length - 1) {
+      return
+    }
+    this.currentImage = (this.index + 1)
+  }
+
+  goRight = () => {
+    if (this.index === 0) {
+      return
+    }
+    this.currentImage = (this.index - 1)
+  }
+
+  get disableLeft(): boolean {
+    return (this.index !== this.data.images.length - 1)
+  }
+
+  get disableRight(): boolean {
+    return (this.index !== 0)
+  }
 
   get currentImage(): string {
     return this._currentImage?.src || '';
@@ -41,17 +64,11 @@ export class DialogImageComponent {
   }
 
   onArrowRight() {
-    if (this.index === 0) {
-      return
-    }
-    this.currentImage = (this.index - 1)
+    this.goRight()
   }
 
   onArrowLeft() {
-    if (this.index === this.data.images.length - 1) {
-      return
-    }
-    this.currentImage = (this.index + 1)
+    this.goLeft()
   }
 
 }
