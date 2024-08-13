@@ -18,28 +18,28 @@ export class imageList {
 export class GalleryComponent {
     public readonly imageList: imageList[] = [
         {
-            src: "/assets/images/gallery/1.jpg",
+            src: "/assets/images/gallery/1.webp",
         },
         {
-            src: "/assets/images/gallery/2.jpg",
+            src: "/assets/images/gallery/2.webp",
         },
         {
-            src: "/assets/images/gallery/3.jpg",
+            src: "/assets/images/gallery/3.webp",
         },
         {
-            src: "/assets/images/gallery/4.jpg",
+            src: "/assets/images/gallery/4.webp",
         },
         {
-            src: "/assets/images/gallery/5.jpg",
+            src: "/assets/images/gallery/5.webp",
         },
         {
-            src: "/assets/images/gallery/6.jpg",
+            src: "/assets/images/gallery/6.webp",
         },
         {
-            src: "/assets/images/gallery/7.jpg",
+            src: "/assets/images/gallery/7.webp",
         },
         {
-            src: "/assets/images/gallery/8.jpg",
+            src: "/assets/images/gallery/8.webp",
         },
     ];
 

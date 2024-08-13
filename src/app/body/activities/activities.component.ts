@@ -17,18 +17,18 @@ export class ActivitiesComponent {
     public activities: ActivityComponentProps[] = [
         {
             id: "0",
-            img: "assets/images/activities/museum.jpg",
+            img: "assets/images/activities/museum.webp",
         },
         {
             id: "1",
         },
         {
             id: "2",
-            img: "assets/images/activities/100-years.jpg",
+            img: "assets/images/activities/100-years.webp",
         },
         {
             id: "3",
-            img: "assets/images/activities/company-event.jpg",
+            img: "assets/images/activities/company-event.webp",
         }
     ];
 
@@ -39,7 +39,7 @@ export class ActivitiesComponent {
     activeIndex = 0;
     onScroll(dots: GalleryDotsComponent) {
         const element = this.scrollContainer.nativeElement;
-        const tmpIndex= dots.scrollHandler(element);
+        const tmpIndex = dots.scrollHandler(element);
         this.activeIndex = tmpIndex
     }
 
