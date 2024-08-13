@@ -9,6 +9,7 @@ export class ActivityComponent {
   @Input() title: string = 'missing';
   @Input() paragraph: string = 'missing';
   @Input() credit?: string;
+  @Input() alt!: string;
   @Input() img?: string;
 
 }

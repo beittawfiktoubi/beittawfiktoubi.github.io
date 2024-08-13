@@ -7,6 +7,7 @@ import { ChangeDetectorRef, Component, ElementRef, Input, ViewChild, viewChild }
 })
 export class ImageComponent {
   @Input() src!: string;
+  @Input() alt?: string;
   smallSrc!: string;
 
   @ViewChild('blurredImage') blurredImage!: ElementRef<HTMLImageElement>;

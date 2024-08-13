@@ -3,7 +3,8 @@
     <app-activity class="scroll-child" *ngFor="let a of activities; let i = index "
         title="{{ 'activities.' + a.id + '.title' | translate}}"
         paragraph="{{ 'activities.' + a.id + '.paragraph' | translate}}"
-        credit="{{ 'activities.' + a.id + '.credit' | translate}}" img="{{a.img}}" [ngClass]="
+        credit="{{ 'activities.' + a.id + '.credit' | translate}}" alt="{{ 'activities.' + a.id + '.alt' | translate}}"
+        img="{{a.img}}" [ngClass]="
         {
             'right-card': (i % 2) === 0,
             'left-card': (i % 2) !== 0,

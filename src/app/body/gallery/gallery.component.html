@@ -1,6 +1,6 @@
 <div (scroll)="onScroll(dots)" #scrollContainer class="no-scrollbar scroll">
     <app-image *ngFor="let image of imageList; let i = index" (click)="openImageDialog(i)" class="pointer scroll-child"
-        [src]="image.src"></app-image>
+        [alt]="'gallery.' + i | translate" [src]="image.src"></app-image>
 </div>
 <app-gallery-dots #dots [activeIndex]="activeIndex" [len]="imageList.length"
     [onDotClicked]="handleDotClick"></app-gallery-dots>

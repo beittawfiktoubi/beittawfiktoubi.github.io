@@ -1,11 +1,11 @@
 <div class="full-width">
     <div class="small-width">
         <div class="text-con">
-            <h2 [innerHTML]="title | translate"></h2>
-            <p [innerHTML]="paragraph | translate"></p>
-            <p class="credit" *ngIf="credit">{{credit | translate}}</p>
+            <h2 [innerHTML]="title"></h2>
+            <p [innerHTML]="paragraph"></p>
+            <p class="credit" *ngIf="credit">{{credit}}</p>
         </div>
-        <app-image *ngIf="img" src="{{img}}"></app-image>
+        <app-image *ngIf="img" [alt]="alt" src="{{img}}"></app-image>
         <app-jane *ngIf="!img"></app-jane>
     </div>
 </div>
