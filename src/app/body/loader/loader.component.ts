@@ -22,12 +22,4 @@ export class LoaderComponent {
       e?.classList.add("up")
     }
   }
-
-  scrollDown(): void {
-    const introElement = document.querySelector('app-intro');
-    if (introElement) {
-      introElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
 }
