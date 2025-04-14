@@ -3,6 +3,7 @@
         <h1 [innerHTML]="section + 'h1' | translate"></h1>
         <p [innerHTML]="section + 'p' | translate"></p>
         <p class="credit" [innerHTML]="section + 'credit' | translate"></p>
+        <a id="link-to-present" href="/assets/presentation.pptx" [innerHTML]="section + 'a' | translate"></a>
     </div>
     <div id="img-con">
         <app-image [alt]="section + 'alt' | translate" [src]="src"></app-image>
