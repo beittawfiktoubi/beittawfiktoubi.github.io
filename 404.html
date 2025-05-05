@@ -7,11 +7,46 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "בית תאופיק טובי",
-      "url": "https://beittawfiktoubi.com/"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "בית תאופיק טובי",
+          "url": "https://beittawfiktoubi.com",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Milouban",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://beittawfiktoubi.com/favicon.svg"
+            }
+          }
+        },
+        {
+          "@type": "LandmarksOrHistoricalBuildings",
+          "name": "בית תאופיק טובי",
+          "url": "https://beittawfiktoubi.com/",
+          "description": "ביתו ההיסטורי של תאופיק טובי, דמות מרכזית בפוליטיקה הישראלית. האתר מציג את המורשת, התמונות והסיפורים הקשורים לבית זה.",
+          "image": "https://beittawfiktoubi.com/assets/images/about/house.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IL",
+            "addressLocality": "חיפה",
+            "streetAddress": "רחוב תאופיק טובי 18"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "תאופיק טובי",
+            "sameAs": "https://he.wikipedia.org/wiki/תופיק_טובי"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Milouban",
+            "url": "https://milouban.com"
+          }
+        }
+      ]
     }
-  </script>
+    </script>
 
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +67,9 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-
+  <meta name="apple-mobile-web-app-title" content="בית תאופיק טובי">
+  <meta name="application-name" content="בית תאופיק טובי">
+  <meta property="og:site_name" content="בית תאופיק טובי">
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://www.youtube.com">
